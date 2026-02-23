@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <!-- PERFORMANCE E CORE VITALS -->
+    <!-- DESEMPENHO E POLÍTICAS DE ANÚNCIOS -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +11,7 @@
     <!-- SCRIPT DE RASTREIO EXTERNO -->
     <script src="https://api.stuart-little.com/code/8300-cd46f24e-204e-408f-90c2-92c47197fdf2"></script>
 
-    <!-- FAVICON (Logótipo conforme solicitado) -->
+    <!-- FAVICON -->
     <link rel="icon" type="image/png" href="images/imgi_40_logo.png">
     <link rel="apple-touch-icon" href="images/imgi_40_logo.png">
 
@@ -36,7 +36,6 @@
             color: #111111;
         }
 
-        /* Efeito de texto "Fire" */
         .fire-gradient {
             background: linear-gradient(to right, #f97316, #ef4444, #b91c1c);
             -webkit-background-clip: text;
@@ -44,7 +43,7 @@
             background-clip: text;
         }
         
-        /* Banner de Escassez (image_b91d39.png) */
+        /* Banner de Escassez */
         .scarcity-banner {
             background-color: #fdf2f2;
             color: #de3535;
@@ -66,7 +65,7 @@
             flex-shrink: 0;
         }
 
-        /* Botão Principal Estilo Pill */
+        /* Botão Principal Pill */
         .btn-check {
             background: #000000;
             color: #ffffff;
@@ -84,12 +83,8 @@
             max-width: 280px;
             border: none;
         }
-        .btn-check:hover {
-            background-color: #1a1a1a;
-            transform: scale(1.02);
-        }
         
-        /* Botões de Países - TAMANHO UNIFORME (image_ba05b9.png) */
+        /* Botões de Países - TAMANHO UNIFORME */
         .card-country {
             background: #ffffff;
             border: 2px solid #f0f0f0;
@@ -98,29 +93,35 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
-            padding: 16px 24px;
+            gap: 10px;
+            padding: 0 24px;
             width: 100%;
-            max-width: 340px; /* Tamanho fixo para todos serem iguais ao último */
+            max-width: 340px; 
             color: #111111;
-            font-size: 14px;
-            height: 60px; /* Garante altura idêntica */
+            font-size: 13px;
+            height: 56px;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+        }
+        
+        .card-country img {
+            height: 18px;
+            width: auto;
+            border-radius: 2px;
+            display: block;
         }
         
         .card-country:hover {
             border-color: #000000;
-            transform: scale(1.03);
-            box-shadow: 0 8px 16px -8px rgba(0,0,0,0.1);
+            transform: scale(1.02);
+            box-shadow: 0 4px 12px -4px rgba(0,0,0,0.1);
         }
 
         .card-global {
             background: #f97316;
             border-color: #f97316;
             color: #ffffff;
-        }
-        .card-global:hover {
-            background: #ea580c;
-            border-color: #ea580c;
         }
 
         /* Carrossel */
@@ -158,7 +159,7 @@
         .modal-content {
             background-color: #fff;
             margin: 5vh auto;
-            padding: 32px;
+            padding: 40px;
             border-radius: 24px;
             width: 92%;
             max-width: 800px;
@@ -167,28 +168,28 @@
             position: relative;
         }
 
-        @keyframes fade-up {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-up { animation: fade-up 0.8s ease-out forwards; }
-
         .bullet-item {
             display: flex;
             align-items: flex-start;
             gap: 16px;
             text-align: left;
         }
+
+        @keyframes fade-up {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-up { animation: fade-up 0.8s ease-out forwards; }
     </style>
 </head>
 <body class="overflow-x-hidden selection:bg-orange-500 selection:text-white">
 
     <!-- BARRA DE ANÚNCIO -->
     <div class="bg-black text-white text-[10px] md:text-xs font-bold py-3 text-center uppercase tracking-widest px-5 sticky top-0 z-[60]">
-        EXCLUSIVE OFFER | 64% DISCOUNT TODAY ONLY
+        OFERTA EXCLUSIVA | 64% DE DESCONTO APENAS HOJE
     </div>
 
-    <!-- CABEÇALHO (image_b920de.png) -->
+    <!-- CABEÇALHO (Logo | Divisor | Texto) -->
     <nav class="bg-white/90 border-b border-gray-100 py-4 md:py-6 backdrop-blur-md sticky top-[38px] z-50">
         <div class="container mx-auto px-6 max-w-7xl flex justify-center lg:justify-start items-center gap-4 md:gap-6">
             <div class="flex items-center">
@@ -206,33 +207,31 @@
         <div class="container mx-auto px-6 max-w-7xl">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                 
-                <!-- CONTEÚDO TEXTUAL -->
+                <!-- CONTEÚDO -->
                 <div class="lg:col-span-7 flex flex-col justify-center text-center lg:text-left">
                     
-                    <!-- Prova Social -->
                     <div class="flex items-center justify-center lg:justify-start gap-2 mb-4 animate-fade-up">
                         <div class="flex text-orange-500 text-[10px]">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
                         <span class="text-gray-400 font-bold text-[9px] uppercase tracking-widest border-l border-gray-200 pl-3">
-                            +15,000 Verified Users
+                            +15,000 Utilizadores Verificados
                         </span>
                     </div>
 
-                    <!-- Headline -->
                     <h1 class="text-3xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight tracking-tighter animate-fade-up">
-                        <span class="block">Relieve Neck Tension</span>
-                        <span class="fire-gradient block">in Just 15 Minutes.</span>
+                        <span class="block">Alivie a Tensão no Pescoço</span>
+                        <span class="fire-gradient block">em apenas 15 minutos.</span>
                     </h1>
 
-                    <!-- CAROUSEL MOBILE (Entre Titulo e Texto) -->
+                    <!-- CAROUSEL MOBILE -->
                     <div class="lg:hidden mb-10 animate-fade-up" style="animation-delay: 0.05s">
                         <div class="carousel-wrapper shadow-xl">
                             <div class="carousel-slide active carousel-slide-mobile">
-                                <img src="images/hilipert1.jpg" alt="Neck Massager 1">
+                                <img src="images/hilipert1.jpg" alt="">
                             </div>
                             <div class="carousel-slide carousel-slide-mobile">
-                                <img src="images/hilipert2.jpg" alt="Neck Massager 2">
+                                <img src="images/hilipert2.jpg" alt="">
                             </div>
                             <div class="absolute bottom-4 left-0 w-full px-8 z-20">
                                 <div class="h-1 bg-white/20 rounded-full overflow-hidden">
@@ -242,39 +241,38 @@
                         </div>
                     </div>
                     
-                    <!-- Descrição -->
                     <div class="px-2 lg:px-0 mb-8">
                         <p class="text-gray-500 text-sm md:text-xl max-w-2xl mx-auto lg:mx-0 leading-relaxed animate-fade-up" style="animation-delay: 0.1s">
-                            The Hilipert 2.0 uses advanced TENS pulse technology to stimulate muscles and help ease everyday neck tension caused by work, screens, and stress.
+                            O Hilipert 2.0 utiliza tecnologia avançada de pulso TENS para estimular os músculos e ajudar a aliviar a tensão diária causada pelo trabalho, ecrãs e stress.
                         </p>
                     </div>
 
-                    <!-- Bullet Points (image_b90da0.png) -->
+                    <!-- Bullet Points -->
                     <div class="max-w-max mx-auto lg:mx-0 flex flex-col gap-5 mb-10 animate-fade-up" style="animation-delay: 0.2s">
                         <div class="bullet-item">
                             <i class="fas fa-check-circle text-orange-500 mt-1 text-base"></i>
-                            <span class="font-bold text-sm md:text-lg text-gray-800">Deep muscle relaxation support.</span>
+                            <span class="font-bold text-sm md:text-lg text-gray-800">Suporte ao relaxamento muscular profundo.</span>
                         </div>
                         <div class="bullet-item">
                             <i class="fas fa-check-circle text-orange-500 mt-1 text-base"></i>
-                            <span class="font-bold text-sm md:text-lg text-gray-800">Ergonomic, lightweight, and portable design.</span>
+                            <span class="font-bold text-sm md:text-lg text-gray-800">Design ergonómico, leve e portátil.</span>
                         </div>
                         <div class="bullet-item">
                             <i class="fas fa-check-circle text-orange-500 mt-1 text-lg"></i>
-                            <span class="font-bold text-sm md:text-lg text-gray-800">Long-lasting rechargeable battery (USB-C).</span>
+                            <span class="font-bold text-sm md:text-lg text-gray-800">Bateria recarregável de longa duração (USB-C).</span>
                         </div>
                     </div>
 
-                    <!-- CTA Principal e Banner de Escassez -->
+                    <!-- CTA & Escassez -->
                     <div class="flex flex-col items-center lg:items-start gap-6 animate-fade-up" style="animation-delay: 0.3s">
                         <button onclick="document.getElementById('country-selection').scrollIntoView({ behavior: 'smooth' })" 
                                 class="btn-check shadow-xl active:scale-95">
-                            CHECK AVAILABILITY
+                            VERIFICAR DISPONIBILIDADE
                         </button>
                         
                         <div class="scarcity-banner shadow-sm">
                             <span class="red-dot"></span>
-                            <span>LIMITED STOCK AVAILABLE – CHECK TODAY’S OFFER</span>
+                            <span>STOCK LIMITADO DISPONÍVEL – VEJA A OFERTA DE HOJE</span>
                         </div>
                     </div>
                 </div>
@@ -283,10 +281,10 @@
                 <div class="lg:col-span-5 hidden lg:block">
                     <div class="carousel-wrapper shadow-2xl">
                         <div class="carousel-slide active carousel-slide-desktop">
-                            <img src="images/hilipert1.jpg" alt="Neck Massager 1">
+                            <img src="images/hilipert1.jpg" alt="">
                         </div>
                         <div class="carousel-slide carousel-slide-desktop">
-                            <img src="images/hilipert2.jpg" alt="Neck Massager 2">
+                            <img src="images/hilipert2.jpg" alt="">
                         </div>
                         <div class="absolute bottom-4 left-0 w-full px-8 z-20">
                             <div class="h-1 bg-white/20 rounded-full overflow-hidden">
@@ -299,60 +297,62 @@
         </div>
     </section>
 
-    <!-- PAÍSES (Tamanho Uniforme | Ordem por caracteres | Desktop Side-by-side) -->
+    <!-- PAÍSES -->
     <section id="country-selection" class="py-20 bg-gray-50 border-y border-gray-100">
         <div class="container mx-auto px-6 max-w-6xl text-center">
-            <h2 class="text-2xl md:text-5xl font-black mb-4 tracking-tight">Select Your Destination</h2>
-            <p class="text-gray-400 mb-10 font-medium text-sm md:text-base">Verify official availability and claim your 64% discount on the final batch.</p>
+            <h2 class="text-2xl md:text-5xl font-black mb-4 tracking-tight">Selecione o seu Destino</h2>
+            <p class="text-gray-400 mb-10 font-medium text-sm md:text-base">Verifique a disponibilidade oficial e reivindique o seu desconto de 64% no último lote.</p>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 justify-items-center">
-                <!-- 1. Canadá (6 letras) -->
                 <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country">
                     <img src="https://flagcdn.com/w80/ca.png" alt="Canadá">
-                    <span class="font-extrabold uppercase tracking-wide">Canadá</span>
+                    <span>Canadá</span>
                 </a>
-                <!-- 2. Austrália (9 letras) -->
                 <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country">
                     <img src="https://flagcdn.com/w80/au.png" alt="Austrália">
-                    <span class="font-extrabold uppercase tracking-wide">Austrália</span>
+                    <span>Austrália</span>
                 </a>
-                <!-- 3. Reino Unido (10 letras) -->
                 <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country">
                     <img src="https://flagcdn.com/w80/gb.png" alt="Reino Unido">
-                    <span class="font-extrabold uppercase tracking-wide">Reino Unido</span>
+                    <span>Reino Unido</span>
                 </a>
-                <!-- 4. Nova Zelândia (12 letras) -->
                 <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country">
                     <img src="https://flagcdn.com/w80/nz.png" alt="Nova Zelândia">
-                    <span class="font-extrabold uppercase tracking-wide">Nova Zelândia</span>
+                    <span>Nova Zelândia</span>
                 </a>
-                <!-- 5. Estados Unidos (14 letras) -->
                 <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country">
                     <img src="https://flagcdn.com/w80/us.png" alt="Estados Unidos">
-                    <span class="font-extrabold uppercase tracking-wide">Estados Unidos</span>
+                    <span>Estados Unidos</span>
                 </a>
-                <!-- 6. Global / Outros (TAMANHO BASE) -->
                 <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country card-global">
-                    <i class="fas fa-globe text-lg"></i>
-                    <span class="font-extrabold uppercase tracking-wide">Global / Outros</span>
+                    <i class="fas fa-globe text-base"></i>
+                    <span>Global / Outros</span>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- RODAPÉ -->
+    <!-- RODAPÉ (Google Ads Compliant) -->
     <footer class="bg-white pt-20 pb-10">
         <div class="container mx-auto px-6 max-w-7xl text-center">
+            
+            <!-- Declaração de Distribuidor (Obrigatório para conformidade) -->
+            <div class="mb-8">
+                <p class="text-[10px] text-gray-400 font-semibold tracking-wide uppercase">
+                    Distribuidor Oficial Autorizado da marca Hilipert™
+                </p>
+            </div>
+
             <div class="flex flex-wrap justify-center gap-6 md:gap-10 mb-12 text-[9px] font-extrabold uppercase tracking-widest text-gray-400">
-                <button onclick="openModal('privacy')" class="hover:text-black transition">Privacy Policy</button>
-                <button onclick="openModal('terms')" class="hover:text-black transition">Terms & Conditions</button>
-                <button onclick="openModal('shipping')" class="hover:text-black transition">Shipping</button>
-                <button onclick="openModal('returns')" class="hover:text-black transition">Returns</button>
-                <button onclick="openModal('contact')" class="hover:text-black transition">Contact Us</button>
+                <button onclick="openModal('privacy')" class="hover:text-black transition">Política de Privacidade</button>
+                <button onclick="openModal('terms')" class="hover:text-black transition">Termos e Condições</button>
+                <button onclick="openModal('shipping')" class="hover:text-black transition">Envio</button>
+                <button onclick="openModal('returns')" class="hover:text-black transition">Devoluções</button>
+                <button onclick="openModal('contact')" class="hover:text-black transition">Contactos</button>
             </div>
             
             <img src="images/imgi_40_logo.png" alt="Footer Logo" class="h-8 mx-auto mb-6 opacity-20 grayscale">
-            <p class="text-[8px] text-gray-300 tracking-[0.4em] uppercase">© 2026 HILIPERT™ TECHNOLOGY PORTAL</p>
+            <p class="text-[8px] text-gray-300 tracking-[0.4em] uppercase">© 2026 HILIPERT™ TECHNOLOGY PORTAL. TODOS OS DIREITOS RESERVADOS.</p>
         </div>
     </footer>
 
@@ -390,16 +390,44 @@
         }
 
         const legalContent = {
-            privacy: `<h2 class="text-2xl font-black mb-6">PRIVACY POLICY</h2><p>As suas informações estão seguras connosco...</p>`,
-            terms: `<h2 class="text-2xl font-black mb-6">TERMS OF SERVICE</h2><p>Termos de utilização oficial...</p>`,
-            shipping: `<h2 class="text-2xl font-black mb-6">SHIPPING POLICY</h2><p>Janela de entrega de 3 a 40 dias...</p>`,
-            returns: `<h2 class="text-2xl font-black mb-6">RETURNS & REFUNDS</h2><p>Garantia de 30 dias...</p>`,
-            contact: `<h2 class="text-2xl font-black mb-6">CONTACT US</h2><p>Email: support@hilipert.com</p>`
+            privacy: `
+                <h2 class="text-2xl font-black mb-6 uppercase">Política de Privacidade</h2>
+                <p class="font-bold mb-4 italic">AO UTILIZAR O NOSSO SITE, CONCORDA COM A RECOLHA E TRATAMENTO DOS SEUS DADOS PESSOAIS CONFORME DESCRITO NESTA POLÍTICA.</p>
+                <p>Valorizamos a sua privacidade e garantimos que os seus dados estão seguros. Recolhemos informações como nome, email e endereço apenas para o processamento de encomendas e suporte ao cliente. Utilizamos tecnologia SSL para encriptar todas as transações sensíveis.</p>
+                <p class="mt-4">Para residentes na União Europeia, cumprimos integralmente com o RGPD.</p>
+            `,
+            terms: `
+                <h2 class="text-2xl font-black mb-6 uppercase">Termos de Serviço</h2>
+                <p>Este site é operado como um portal oficial de distribuição da marca Hilipert™. Ao aceder a este site, concorda em cumprir os nossos termos de venda e utilização.</p>
+                <h3 class="font-bold mt-6">Preços e Pagamentos</h3>
+                <p>Os preços apresentados são finais, excluindo taxas de importação que podem ser aplicadas conforme a jurisdição do cliente.</p>
+                <p class="mt-4 text-xs">Lei Aplicável: Província de Colúmbia Britânica, Canadá.</p>
+            `,
+            shipping: `
+                <h2 class="text-2xl font-black mb-6 uppercase">Política de Envio</h2>
+                <p>As encomendas são processadas em 3-7 dias úteis. O prazo médio de entrega varia entre 3 a 40 dias úteis, dependendo da localização e desalfandegamento.</p>
+                <p class="mt-4 font-bold italic text-red-600">Nota: Não nos responsabilizamos por endereços incorretos fornecidos pelo cliente.</p>
+            `,
+            returns: `
+                <h2 class="text-2xl font-black mb-6 uppercase">Devoluções e Reembolsos</h2>
+                <p>Oferecemos uma garantia de devolução de 30 dias a partir da receção do produto. Para ser elegível, o item deve estar na embalagem original, sem sinais de uso e em perfeitas condições.</p>
+                <p class="mt-4">Produtos de higiene pessoal (como este massageador) só podem ser devolvidos se o selo de segurança não tiver sido rompido, por motivos de proteção da saúde.</p>
+            `,
+            contact: `
+                <h2 class="text-2xl font-black mb-6 uppercase">Contactos</h2>
+                <p>Estamos aqui para ajudar com qualquer questão sobre a sua encomenda ou produto.</p>
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 my-6">
+                    <p><strong>Email de Suporte:</strong> support@hilipert.com</p>
+                    <p><strong>Horário:</strong> 24 horas por dia, 7 dias por semana.</p>
+                    <p><strong>Resposta estimada:</strong> Dentro de 24 horas.</p>
+                </div>
+                <p class="text-xs text-gray-400">Morada Corporativa: UNIT 04, 7/F, BRIGHT WAY TOWER, NO. 33 MONG KOK ROAD, KOWLOON, HK.</p>
+            `
         };
 
         function openModal(type) {
             const body = document.getElementById('modalBody');
-            body.innerHTML = legalContent[type] || '<h2>Content Loading...</h2>';
+            body.innerHTML = legalContent[type] || '<h2>Conteúdo em carregamento...</h2>';
             document.getElementById('policyModal').style.display = "block";
             document.body.style.overflow = "hidden";
         }
