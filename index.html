@@ -33,7 +33,7 @@
             color: #111111;
         }
 
-        /* "Fire" Text Effect for Headline */
+        /* Efeito de texto "Fire" para a Headline */
         .fire-gradient {
             background: linear-gradient(to right, #f97316, #ef4444, #b91c1c);
             -webkit-background-clip: text;
@@ -41,51 +41,69 @@
             background-clip: text;
         }
         
-        /* Pill Button Style from Image */
+        /* Botão Principal Estilo Pill */
         .btn-pill {
             background: #000000;
             color: #ffffff;
+            border: 2px solid #000000;
             border-radius: 9999px;
-            padding: 16px 32px;
-            font-weight: 700;
+            padding: 18px 32px;
+            font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             display: inline-flex;
             align-items: center;
             justify-content: center;
             width: 100%;
         }
+        .btn-pill:hover {
+            background: #f97316;
+            border-color: #f97316;
+            transform: translateY(-2px);
+        }
         
+        /* Botões de Países com Bordas Destacadas */
         .card-country {
             background: #ffffff;
-            border: 1px solid #e5e7eb;
+            border: 2px solid #f0f0f0; /* Borda mais visível conforme solicitado */
             border-radius: 9999px;
             transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 12px;
-            padding: 14px 24px;
+            padding: 16px 24px;
             width: 100%;
+            color: #111111;
         }
         
         @media (min-width: 768px) {
             .card-country {
-                padding: 18px 36px;
+                padding: 20px 40px;
                 font-size: 1.125rem;
             }
             .btn-pill {
                 width: auto;
-                padding: 20px 48px;
+                padding: 22px 64px;
             }
         }
 
         .card-country:hover {
-            background: #000000;
-            color: #ffffff;
             border-color: #000000;
-            transform: scale(1.05);
+            transform: scale(1.03);
+            box-shadow: 0 10px 20px -10px rgba(0,0,0,0.1);
+        }
+
+        /* Botão Global de Destaque */
+        .card-global {
+            background: #f97316;
+            border-color: #f97316;
+            color: #ffffff;
+        }
+        .card-global:hover {
+            background: #ea580c;
+            border-color: #ea580c;
         }
 
         .carousel-wrapper {
@@ -158,40 +176,40 @@
             box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
         }
 
-        /* Bullet Points Alignment from Image */
+        /* Alinhamento dos Bullet Points Conforme Imagem */
         .bullet-item {
             display: flex;
             align-items: flex-start;
-            gap: 12px;
+            gap: 16px;
             text-align: left;
         }
     </style>
 </head>
 <body class="overflow-x-hidden selection:bg-orange-500 selection:text-white">
 
-    <!-- ANNOUNCEMENT BAR -->
+    <!-- BARRA DE ANÚNCIO -->
     <div class="bg-black text-white text-[10px] md:text-xs font-bold py-3 text-center uppercase tracking-widest px-5 sticky top-0 z-[60]" data-i18n="top_bar">
         EXCLUSIVE OFFER | 64% DISCOUNT TODAY ONLY
     </div>
 
-    <!-- NAVIGATION -->
-    <nav class="bg-white/90 border-b border-gray-100 py-4 backdrop-blur-md sticky top-[38px] z-50">
-        <div class="container mx-auto px-6 max-w-7xl flex items-center">
+    <!-- CABEÇALHO -->
+    <nav class="bg-white/90 border-b border-gray-100 py-6 md:py-8 backdrop-blur-md sticky top-[38px] z-50">
+        <div class="container mx-auto px-6 max-w-7xl flex justify-center lg:justify-start items-center">
             <div class="flex items-center">
-                <img src="images/imgi_40_logo.png" alt="Logo" class="h-8 md:h-10">
+                <img src="images/imgi_40_logo.png" alt="Logo" class="h-12 md:h-20 w-auto object-contain">
             </div>
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
+    <!-- SECÇÃO HERO -->
     <section class="bg-white py-12 md:py-24">
         <div class="container mx-auto px-6 max-w-7xl">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                 
-                <!-- TEXT CONTENT -->
+                <!-- CONTEÚDO TEXTUAL -->
                 <div class="lg:col-span-7 flex flex-col justify-center text-center lg:text-left">
                     
-                    <!-- 1. Prova Social -->
+                    <!-- Prova Social -->
                     <div class="flex items-center justify-center lg:justify-start gap-2 mb-4 animate-fade-up">
                         <div class="flex text-orange-500 text-xs">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -201,19 +219,19 @@
                         </span>
                     </div>
 
-                    <!-- 2. Selo de Desconto -->
+                    <!-- Selo de Desconto -->
                     <div class="animate-fade-up" style="animation-delay: 0.05s">
                         <span class="sale-badge" data-i18n="discount_tag">64% DISCOUNT APPLIED</span>
                     </div>
                     
-                    <!-- 3. Título (Headline) -->
+                    <!-- Título (Headline) -->
                     <h1 class="text-4xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight tracking-tighter animate-fade-up">
                         <span class="block" data-i18n="headline_1">Relieve Neck Tension</span>
                         <span class="fire-gradient block" data-i18n="headline_2">in Just 15 Minutes.</span>
                     </h1>
 
-                    <!-- 4. CAROUSEL - Visível apenas no mobile (depois do título, antes do texto) -->
-                    <div class="lg:hidden mb-8 animate-fade-up" style="animation-delay: 0.08s">
+                    <!-- CAROUSEL MOBILE -->
+                    <div class="lg:hidden mb-10 animate-fade-up" style="animation-delay: 0.08s">
                         <div class="carousel-wrapper shadow-xl">
                             <div class="carousel-slide active carousel-slide-mobile">
                                 <img src="images/hilipert1.jpg" alt="Massager View 1" onerror="this.src='https://via.placeholder.com/600x600?text=Hilipert+1'">
@@ -229,33 +247,33 @@
                         </div>
                     </div>
                     
-                    <!-- 5. Descrição (Subheadline) -->
+                    <!-- Descrição -->
                     <div class="px-2 lg:px-0">
-                        <p class="text-gray-500 text-lg md:text-xl mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed animate-fade-up" style="animation-delay: 0.1s" data-i18n="subheadline">
+                        <p class="text-gray-500 text-lg md:text-xl mb-12 max-w-2xl mx-auto lg:mx-0 leading-relaxed animate-fade-up" style="animation-delay: 0.1s" data-i18n="subheadline">
                             The Hilipert 2.0 uses advanced TENS pulse technology to stimulate muscles and help ease everyday neck tension caused by work, screens, and stress.
                         </p>
                     </div>
 
-                    <!-- 6. Bullet Points (Otimizados para Alinhamento) -->
-                    <div class="flex flex-col gap-6 mb-12 max-w-md mx-auto lg:mx-0 animate-fade-up" style="animation-delay: 0.2s">
+                    <!-- Bullet Points (Fiel à imagem image_b90da0.png) -->
+                    <div class="flex flex-col gap-8 mb-12 max-w-md mx-auto lg:mx-0 animate-fade-up" style="animation-delay: 0.2s">
                         <div class="bullet-item">
-                            <i class="fas fa-check-circle text-orange-500 mt-1 text-lg"></i>
-                            <span class="font-bold text-base md:text-lg text-gray-800" data-i18n="feat1">Deep muscle relaxation support.</span>
+                            <i class="fas fa-check-circle text-orange-500 mt-1 text-xl"></i>
+                            <span class="font-bold text-lg md:text-xl text-gray-800" data-i18n="feat1">Deep muscle relaxation support.</span>
                         </div>
                         <div class="bullet-item">
-                            <i class="fas fa-check-circle text-orange-500 mt-1 text-lg"></i>
-                            <span class="font-bold text-base md:text-lg text-gray-800" data-i18n="feat2">Ergonomic, lightweight, and portable design.</span>
+                            <i class="fas fa-check-circle text-orange-500 mt-1 text-xl"></i>
+                            <span class="font-bold text-lg md:text-xl text-gray-800" data-i18n="feat2">Ergonomic, lightweight, and portable design.</span>
                         </div>
                         <div class="bullet-item">
-                            <i class="fas fa-check-circle text-orange-500 mt-1 text-lg"></i>
-                            <span class="font-bold text-base md:text-lg text-gray-800" data-i18n="feat3">Long-lasting rechargeable battery (USB-C).</span>
+                            <i class="fas fa-check-circle text-orange-500 mt-1 text-xl"></i>
+                            <span class="font-bold text-lg md:text-xl text-gray-800" data-i18n="feat3">Long-lasting rechargeable battery (USB-C).</span>
                         </div>
                     </div>
 
-                    <!-- 7. Botão CTA -->
+                    <!-- Botão CTA -->
                     <div class="flex flex-col items-center lg:items-start gap-6 animate-fade-up" style="animation-delay: 0.3s">
                         <button onclick="document.getElementById('country-selection').scrollIntoView({ behavior: 'smooth' })" 
-                                class="btn-pill shadow-xl hover:bg-orange-600 hover:-translate-y-1 active:scale-95 text-sm md:text-lg">
+                                class="btn-pill shadow-xl active:scale-95">
                             <span data-i18n="cta_check">SELECT YOUR COUNTRY - 64% OFF</span>
                         </button>
                         
@@ -266,7 +284,7 @@
                     </div>
                 </div>
 
-                <!-- CAROUSEL - Visível apenas no Desktop -->
+                <!-- CAROUSEL DESKTOP -->
                 <div class="lg:col-span-5 hidden lg:block">
                     <div class="carousel-wrapper shadow-2xl">
                         <div class="carousel-slide active carousel-slide-desktop">
@@ -287,36 +305,36 @@
         </div>
     </section>
 
-    <!-- COUNTRY SELECTION -->
+    <!-- SELECÇÃO DE DESTINO (BORDAS DESTACADAS - image_b9117c.png) -->
     <section id="country-selection" class="py-24 bg-gray-50 border-y border-gray-100">
         <div class="container mx-auto px-6 max-w-6xl text-center">
             <h2 class="text-3xl md:text-5xl font-black mb-4 tracking-tight" data-i18n="region_title">Select Your Destination</h2>
             <p class="text-gray-400 mb-16 font-medium" data-i18n="region_sub">Verify official availability and claim your 64% discount on the final batch.</p>
             
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 justify-items-center">
-                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country max-w-[340px]">
-                    <img src="https://flagcdn.com/w40/us.png" class="w-6 h-auto" alt="USA">
-                    <span class="font-bold">United States</span>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country max-w-[400px]">
+                    <img src="https://flagcdn.com/w80/us.png" class="w-8 h-auto shadow-sm" alt="USA">
+                    <span class="font-extrabold">United States</span>
                 </a>
-                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country max-w-[340px]">
-                    <img src="https://flagcdn.com/w40/gb.png" class="w-6 h-auto" alt="UK">
-                    <span class="font-bold">United Kingdom</span>
+                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country max-w-[400px]">
+                    <img src="https://flagcdn.com/w80/gb.png" class="w-8 h-auto shadow-sm" alt="UK">
+                    <span class="font-extrabold">United Kingdom</span>
                 </a>
-                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country max-w-[340px]">
-                    <img src="https://flagcdn.com/w40/ca.png" class="w-6 h-auto" alt="Canada">
-                    <span class="font-bold">Canada</span>
+                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country max-w-[400px]">
+                    <img src="https://flagcdn.com/w80/ca.png" class="w-8 h-auto shadow-sm" alt="Canada">
+                    <span class="font-extrabold">Canada</span>
                 </a>
-                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country max-w-[340px]">
-                    <img src="https://flagcdn.com/w40/au.png" class="w-6 h-auto" alt="Australia">
-                    <span class="font-bold">Australia</span>
+                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country max-w-[400px]">
+                    <img src="https://flagcdn.com/w80/au.png" class="w-8 h-auto shadow-sm" alt="Australia">
+                    <span class="font-extrabold">Australia</span>
                 </a>
-                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country max-w-[340px]">
-                    <img src="https://flagcdn.com/w40/nz.png" class="w-6 h-auto" alt="NZ">
-                    <span class="font-bold">New Zealand</span>
+                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country max-w-[400px]">
+                    <img src="https://flagcdn.com/w80/nz.png" class="w-8 h-auto shadow-sm" alt="NZ">
+                    <span class="font-extrabold">New Zealand</span>
                 </a>
-                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country max-w-[340px] bg-orange-600 text-white border-orange-600">
-                    <i class="fas fa-globe"></i>
-                    <span class="font-bold">Global / Others</span>
+                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country card-global max-w-[400px]">
+                    <i class="fas fa-globe text-xl"></i>
+                    <span class="font-extrabold">Global / Others</span>
                 </a>
             </div>
         </div>
@@ -331,7 +349,7 @@
                 <button onclick="openModal('contact')" class="hover:text-black">Contact Us</button>
             </div>
             
-            <img src="images/imgi_40_logo.png" alt="Footer Logo" class="h-6 mx-auto mb-8 opacity-20 grayscale">
+            <img src="images/imgi_40_logo.png" alt="Footer Logo" class="h-10 mx-auto mb-8 opacity-20 grayscale">
             <p class="text-[9px] text-gray-300 tracking-[0.4em] uppercase">© 2026 HILIPERT™ TECHNOLOGY PORTAL</p>
         </div>
     </footer>
@@ -345,7 +363,6 @@
     </div>
 
     <script>
-        // Carousel Logic
         function initCarousel(slideClass, progressClass) {
             const slides = document.querySelectorAll(slideClass);
             const progressBar = document.querySelector(progressClass);
@@ -371,7 +388,6 @@
             rotateCarousel();
         }
 
-        // Language Logic
         const resources = {
             en: {
                 top_bar: "EXCLUSIVE OFFER | 64% DISCOUNT TODAY ONLY",
