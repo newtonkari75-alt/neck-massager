@@ -146,17 +146,12 @@
         EXCLUSIVE OFFER | 64% DISCOUNT TODAY ONLY
     </div>
 
-    <!-- NAVIGATION -->
+    <!-- NAVIGATION (Button removed as per request) -->
     <nav class="bg-white/90 border-b border-gray-100 py-4 backdrop-blur-md sticky top-[38px] z-50">
-        <div class="container mx-auto px-6 max-w-7xl flex justify-between items-center">
+        <div class="container mx-auto px-6 max-w-7xl flex items-center">
             <div class="flex items-center">
                 <img src="images/imgi_40_logo.png" alt="Logo" class="h-8 md:h-10">
             </div>
-            <button onclick="document.getElementById('country-selection').scrollIntoView({ behavior: 'smooth' })" 
-                    class="text-[10px] font-bold uppercase tracking-widest bg-black text-white px-6 py-2.5 rounded-full hover:bg-orange-600 transition-colors"
-                    data-i18n="nav_check">
-                Check Availability
-            </button>
         </div>
     </nav>
 
@@ -268,7 +263,6 @@
             <h2 class="text-3xl md:text-5xl font-black mb-4 tracking-tight" data-i18n="region_title">Select Your Destination</h2>
             <p class="text-gray-400 mb-16 font-medium" data-i18n="region_sub">Verify official availability and claim your 64% discount on the final batch.</p>
             
-            <!-- Grid ajustado para mobile (2 colunas ou 1 grande) -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 justify-items-center">
                 <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country max-w-[340px]">
                     <img src="https://flagcdn.com/w40/us.png" class="w-6 h-auto" alt="USA">
@@ -321,7 +315,7 @@
     </div>
 
     <script>
-        // Carousel Logic (Unified for both instances)
+        // Carousel Logic
         function initCarousel(slideClass, progressClass) {
             const slides = document.querySelectorAll(slideClass);
             const progressBar = document.querySelector(progressClass);
@@ -351,7 +345,6 @@
         const resources = {
             en: {
                 top_bar: "EXCLUSIVE OFFER | 64% DISCOUNT TODAY ONLY",
-                nav_check: "Check Availability",
                 reviews: "+15,000 Verified Users",
                 discount_tag: "64% DISCOUNT APPLIED",
                 headline_1: "Relieve Neck Tension",
@@ -393,7 +386,6 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             setLanguage();
-            // Start both carousel instances
             initCarousel('.carousel-slide-mobile', '.progress-bar-mobile');
             initCarousel('.carousel-slide-desktop', '.progress-bar-desktop');
         });
