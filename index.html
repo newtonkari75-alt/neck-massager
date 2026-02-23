@@ -8,12 +8,16 @@
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="theme-color" content="#ffffff">
 
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="images/imgi_40_logo.png">
+    <link rel="apple-touch-icon" href="images/imgi_40_logo.png">
+
     <!-- PRE-CONNECTIONS -->
     <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <title>Hilipert™ | Neck Massager 2.0 - Deep Tension Relief</title>
+    <title>Hilipert™ | Neck Massager 2.0 - 64% Off Flash Sale</title>
     
     <!-- UI LIBRARIES -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -46,8 +50,16 @@
             align-items: center;
             justify-content: center;
             gap: 12px;
-            padding: 12px 24px;
+            padding: 14px 28px; /* Slightly increased default padding */
         }
+        
+        @media (min-width: 768px) {
+            .card-country {
+                padding: 18px 36px; /* Larger padding for desktop */
+                font-size: 1.125rem; /* Slightly larger font */
+            }
+        }
+
         .card-country:hover {
             background: #000000;
             color: #ffffff;
@@ -112,13 +124,25 @@
             to { opacity: 1; transform: translateY(0); }
         }
         .animate-fade-up { animation: fade-up 0.8s ease-out forwards; }
+        
+        .sale-badge {
+            background: #ef4444;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-weight: 800;
+            font-size: 14px;
+            display: inline-block;
+            margin-bottom: 12px;
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+        }
     </style>
 </head>
 <body class="overflow-x-hidden selection:bg-orange-500 selection:text-white">
 
     <!-- ANNOUNCEMENT BAR -->
     <div class="bg-black text-white text-[10px] md:text-xs font-bold py-3 text-center uppercase tracking-widest px-5 sticky top-0 z-[60]" data-i18n="top_bar">
-        EXTREME DEMAND | RELIEVE TENSION IN 15 MINUTES
+        EXCLUSIVE OFFER | 64% DISCOUNT TODAY ONLY
     </div>
 
     <!-- NAVIGATION -->
@@ -142,13 +166,17 @@
                 
                 <!-- TEXT CONTENT (7 COLS) -->
                 <div class="lg:col-span-7 flex flex-col justify-center text-center lg:text-left order-2 lg:order-1">
-                    <div class="flex items-center justify-center lg:justify-start gap-2 mb-6 animate-fade-up">
+                    <div class="flex items-center justify-center lg:justify-start gap-2 mb-4 animate-fade-up">
                         <div class="flex text-orange-500 text-xs">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
                         <span class="text-gray-400 font-bold text-[10px] uppercase tracking-widest border-l border-gray-200 pl-3" data-i18n="reviews">
                             +15,000 Verified Users
                         </span>
+                    </div>
+
+                    <div class="animate-fade-up" style="animation-delay: 0.05s">
+                        <span class="sale-badge" data-i18n="discount_tag">64% DISCOUNT APPLIED</span>
                     </div>
                     
                     <h1 class="text-4xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight tracking-tighter animate-fade-up">
@@ -178,7 +206,7 @@
                     <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 animate-fade-up" style="animation-delay: 0.3s">
                         <button onclick="document.getElementById('country-selection').scrollIntoView({ behavior: 'smooth' })" 
                                 class="w-full sm:w-auto bg-black text-white font-black text-xl py-5 px-12 rounded-2xl shadow-xl hover:bg-orange-600 hover:-translate-y-1 transition-all active:scale-95">
-                            <span data-i18n="cta_check">SELECT YOUR COUNTRY</span>
+                            <span data-i18n="cta_check">SELECT YOUR COUNTRY - 64% OFF</span>
                         </button>
                         
                         <div class="inline-flex items-center gap-2 bg-red-50 text-red-600 px-4 py-2 rounded-lg text-xs font-extrabold uppercase tracking-tight">
@@ -188,9 +216,9 @@
                     </div>
                 </div>
 
-                <!-- CAROUSEL (5 COLS) -->
+                <!-- CAROUSEL -->
                 <div class="lg:col-span-5 order-1 lg:order-2">
-                    <div class="carousel-wrapper shadow-2xl border-4 border-white">
+                    <div class="carousel-wrapper shadow-2xl">
                         <div class="carousel-slide active">
                             <img src="images/hilipert1.jpg" alt="Massager View 1" onerror="this.src='https://via.placeholder.com/600x600?text=Hilipert+1'">
                         </div>
@@ -213,32 +241,32 @@
 
     <!-- COUNTRY SELECTION -->
     <section id="country-selection" class="py-24 bg-gray-50 border-y border-gray-100">
-        <div class="container mx-auto px-6 max-w-5xl text-center">
+        <div class="container mx-auto px-6 max-w-6xl text-center">
             <h2 class="text-3xl md:text-5xl font-black mb-4 tracking-tight" data-i18n="region_title">Select Your Destination</h2>
-            <p class="text-gray-400 mb-16 font-medium" data-i18n="region_sub">Verify official availability and claim the current batch discount.</p>
+            <p class="text-gray-400 mb-16 font-medium" data-i18n="region_sub">Verify official availability and claim your 64% discount on the final batch.</p>
             
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center">
-                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country w-full max-w-[280px]">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country w-full max-w-[280px] md:max-w-[340px]">
                     <img src="https://flagcdn.com/w40/us.png" class="w-6 h-auto" alt="USA">
                     <span class="font-bold">United States</span>
                 </a>
-                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country w-full max-w-[280px]">
+                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country w-full max-w-[280px] md:max-w-[340px]">
                     <img src="https://flagcdn.com/w40/gb.png" class="w-6 h-auto" alt="UK">
                     <span class="font-bold">United Kingdom</span>
                 </a>
-                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country w-full max-w-[280px]">
+                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country w-full max-w-[280px] md:max-w-[340px]">
                     <img src="https://flagcdn.com/w40/ca.png" class="w-6 h-auto" alt="Canada">
                     <span class="font-bold">Canada</span>
                 </a>
-                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country w-full max-w-[280px]">
+                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country w-full max-w-[280px] md:max-w-[340px]">
                     <img src="https://flagcdn.com/w40/au.png" class="w-6 h-auto" alt="Australia">
                     <span class="font-bold">Australia</span>
                 </a>
-                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country w-full max-w-[280px]">
+                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country w-full max-w-[280px] md:max-w-[340px]">
                     <img src="https://flagcdn.com/w40/nz.png" class="w-6 h-auto" alt="NZ">
                     <span class="font-bold">New Zealand</span>
                 </a>
-                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country w-full max-w-[280px] bg-orange-600 text-white border-orange-600">
+                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country w-full max-w-[280px] md:max-w-[340px] bg-orange-600 text-white border-orange-600">
                     <i class="fas fa-globe"></i>
                     <span class="font-bold">Global / Others</span>
                 </a>
@@ -293,9 +321,10 @@
         // Language Logic
         const resources = {
             en: {
-                top_bar: "EXTREME DEMAND | RELIEVE TENSION IN 15 MINUTES",
+                top_bar: "EXCLUSIVE OFFER | 64% DISCOUNT TODAY ONLY",
                 nav_check: "Check Availability",
                 reviews: "+15,000 Verified Users",
+                discount_tag: "64% DISCOUNT APPLIED",
                 headline_1: "Relieve Neck Tension",
                 headline_2: "in Just 15 Minutes.",
                 subheadline: "The Hilipert 2.0 uses advanced TENS pulse technology to stimulate muscles and help ease everyday neck tension caused by work, screens, and stress.",
@@ -303,9 +332,9 @@
                 feat2: "Ergonomic, lightweight, and portable design.", 
                 feat3: "Long-lasting rechargeable battery (USB-C).",
                 stock: "🔴 Limited Stock Available – Check Today’s Offer",
-                cta_check: "SELECT YOUR COUNTRY",
+                cta_check: "SELECT YOUR COUNTRY - 64% OFF",
                 region_title: "Select Your Destination",
-                region_sub: "Verify official availability and claim the current batch discount.",
+                region_sub: "Verify official availability and claim your 64% discount on the final batch.",
                 modal_privacy: "<h2>Privacy</h2><p>Your data is secure and encrypted according to global standards.</p>",
                 modal_terms: "<h2>Terms</h2><p>Offers are valid while regional stocks last.</p>",
                 modal_contact: "<h2>Contact</h2><p>Official support: support@hilipert-neck.com</p>"
