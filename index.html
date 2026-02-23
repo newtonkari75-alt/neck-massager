@@ -48,14 +48,15 @@
             background-color: #fdf2f2;
             color: #de3535;
             border-radius: 12px;
-            padding: 10px 16px;
+            padding: 12px 20px;
             display: inline-flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             font-weight: 800;
             font-size: 10px;
             text-transform: uppercase;
             letter-spacing: 0.02em;
+            line-height: 1.2;
         }
         .red-dot {
             width: 8px;
@@ -65,12 +66,12 @@
             flex-shrink: 0;
         }
 
-        /* Pill Button Main Style */
+        /* Pill Button Style */
         .btn-check {
             background: #000000;
             color: #ffffff;
             border-radius: 9999px;
-            padding: 14px 32px;
+            padding: 16px 36px;
             font-weight: 700;
             font-size: 14px;
             text-transform: uppercase;
@@ -85,7 +86,7 @@
         }
         .btn-check:hover { background-color: #1a1a1a; transform: scale(1.02); }
         
-        /* Country Buttons - UNIFORM SIZE */
+        /* Country Buttons - Uniform sizing (image_ba05b9.png) */
         .card-country {
             background: #ffffff;
             border: 2px solid #f0f0f0;
@@ -100,27 +101,82 @@
             max-width: 340px; 
             color: #111111;
             font-size: 13px;
-            height: 56px;
+            height: 58px;
             text-transform: uppercase;
             font-weight: 700;
             letter-spacing: 0.03em;
         }
         
-        .card-country img { height: 18px; width: auto; border-radius: 2px; display: block; }
-        .card-country:hover { border-color: #000000; transform: scale(1.02); box-shadow: 0 4px 12px -4px rgba(0,0,0,0.1); }
-        .card-global { background: #f97316; border-color: #f97316; color: #ffffff; }
+        .card-country img {
+            height: 16px;
+            width: auto;
+            border-radius: 2px;
+            display: block;
+        }
+        
+        .card-country:hover {
+            border-color: #000000;
+            transform: scale(1.02);
+            box-shadow: 0 4px 12px -4px rgba(0,0,0,0.1);
+        }
 
-        /* Carousel */
-        .carousel-wrapper { position: relative; width: 100%; border-radius: 24px; overflow: hidden; background-color: #f9fafb; aspect-ratio: 1 / 1; }
-        .carousel-slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 0.8s ease-in-out; display: flex; align-items: center; justify-content: center; }
+        .card-global {
+            background: #f97316;
+            border-color: #f97316;
+            color: #ffffff;
+        }
+        .card-global:hover { background: #ea580c; border-color: #ea580c; }
+
+        /* Carousel setup */
+        .carousel-wrapper {
+            position: relative;
+            width: 100%;
+            border-radius: 24px;
+            overflow: hidden;
+            background-color: #f9fafb;
+            aspect-ratio: 1 / 1; 
+        }
+        .carousel-slide {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
         .carousel-slide.active { opacity: 1; z-index: 10; }
         .carousel-slide img { width: 100%; height: 100%; object-fit: cover; }
 
-        /* Modal */
-        .modal { display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); backdrop-filter: blur(8px); }
-        .modal-content { background-color: #fff; margin: 5vh auto; padding: 40px; border-radius: 24px; width: 92%; max-width: 800px; max-height: 85vh; overflow-y: auto; position: relative; }
+        /* Modal styling */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            backdrop-filter: blur(8px);
+        }
+        .modal-content {
+            background-color: #fff;
+            margin: 5vh auto;
+            padding: 40px;
+            border-radius: 24px;
+            width: 92%;
+            max-width: 800px;
+            max-height: 85vh;
+            overflow-y: auto;
+            position: relative;
+        }
 
-        .bullet-item { display: flex; align-items: flex-start; gap: 16px; text-align: left; }
+        .bullet-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            text-align: left;
+        }
 
         @keyframes fade-up { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         .animate-fade-up { animation: fade-up 0.8s ease-out forwards; }
@@ -133,42 +189,42 @@
         EXCLUSIVE OFFER | 64% DISCOUNT TODAY ONLY
     </div>
 
-    <!-- HEADER (Optimized Desktop Spacing) -->
-    <nav class="bg-white/95 border-b border-gray-100 py-5 md:py-8 backdrop-blur-md sticky top-[38px] z-50">
-        <div class="container mx-auto px-6 lg:px-12 max-w-7xl flex justify-center lg:justify-start items-center gap-6 md:gap-10">
+    <!-- HEADER (Optimized Spacing image_ba6715.jpg) -->
+    <nav class="bg-white/95 border-b border-gray-100 py-6 md:py-10 backdrop-blur-md sticky top-[38px] z-50">
+        <div class="container mx-auto px-6 lg:px-12 max-w-7xl flex justify-center lg:justify-start items-center gap-6 md:gap-12">
             <div class="flex items-center">
-                <img src="images/imgi_40_logo.png" alt="Hilipert Logo" class="h-10 md:h-14 w-auto object-contain">
+                <img src="images/imgi_40_logo.png" alt="Hilipert Logo" class="h-10 md:h-16 w-auto object-contain">
             </div>
             <div class="hidden md:block h-10 w-px bg-gray-200 opacity-60"></div>
-            <div class="text-[10px] md:text-base font-medium text-gray-800 tracking-tight leading-tight" id="header-phrase">
+            <div class="text-[11px] md:text-lg font-medium text-gray-800 tracking-tight leading-tight" id="header-phrase">
                 Enjoy Massage Therapy at Home
             </div>
         </div>
     </nav>
 
     <!-- HERO SECTION -->
-    <section class="bg-white py-10 md:py-24">
+    <section class="bg-white py-12 md:py-24">
         <div class="container mx-auto px-6 lg:px-12 max-w-7xl">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-32 items-start">
                 
-                <!-- CONTENT -->
+                <!-- TEXT CONTENT -->
                 <div class="lg:col-span-7 flex flex-col justify-center text-center lg:text-left">
                     
                     <div class="flex items-center justify-center lg:justify-start gap-2 mb-6 animate-fade-up">
-                        <div class="flex text-orange-500 text-[10px]">
+                        <div class="flex text-orange-500 text-[11px]">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
-                        <span class="text-gray-400 font-bold text-[9px] uppercase tracking-widest border-l border-gray-200 pl-3" id="social-proof">
+                        <span class="text-gray-400 font-bold text-[10px] uppercase tracking-widest border-l border-gray-200 pl-4 ml-2" id="social-proof">
                             +15,000 Verified Users
                         </span>
                     </div>
 
-                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-black mb-8 leading-tight tracking-tighter animate-fade-up">
+                    <h1 class="text-4xl md:text-6xl lg:text-8xl font-black mb-8 leading-tight tracking-tighter animate-fade-up">
                         <span class="block" id="headline-1">Relieve Neck Tension</span>
                         <span class="fire-gradient block" id="headline-2">in Just 15 Minutes.</span>
                     </h1>
 
-                    <!-- CAROUSEL MOBILE -->
+                    <!-- CAROUSEL MOBILE (Title > Carousel > Text) -->
                     <div class="lg:hidden mb-12 animate-fade-up" style="animation-delay: 0.05s">
                         <div class="carousel-wrapper shadow-xl">
                             <div class="carousel-slide active carousel-slide-mobile"><img src="images/hilipert1.jpg" alt=""></div>
@@ -182,31 +238,31 @@
                     </div>
                     
                     <div class="px-2 lg:px-0 mb-10">
-                        <p class="text-gray-500 text-sm md:text-xl max-w-2xl mx-auto lg:mx-0 leading-relaxed animate-fade-up" style="animation-delay: 0.1s" id="subheadline">
+                        <p class="text-gray-500 text-base md:text-2xl max-w-2xl mx-auto lg:mx-0 leading-relaxed animate-fade-up" style="animation-delay: 0.1s" id="subheadline">
                             The Hilipert 2.0 uses advanced TENS pulse technology to stimulate muscles and help ease everyday neck tension caused by work, screens, and stress.
                         </p>
                     </div>
 
                     <!-- Bullet Points (image_b90da0.png) -->
-                    <div class="max-w-max mx-auto lg:mx-0 flex flex-col gap-6 mb-12 animate-fade-up" style="animation-delay: 0.2s">
+                    <div class="max-w-max mx-auto lg:mx-0 flex flex-col gap-8 mb-16 animate-fade-up" style="animation-delay: 0.2s">
                         <div class="bullet-item">
-                            <i class="fas fa-check-circle text-orange-500 mt-1 text-base"></i>
-                            <span class="font-bold text-sm md:text-lg text-gray-800" id="feat-1">Deep muscle relaxation support.</span>
+                            <i class="fas fa-check-circle text-orange-500 mt-1 text-lg md:text-xl"></i>
+                            <span class="font-bold text-base md:text-xl text-gray-800" id="feat-1">Deep muscle relaxation support.</span>
                         </div>
                         <div class="bullet-item">
-                            <i class="fas fa-check-circle text-orange-500 mt-1 text-base"></i>
-                            <span class="font-bold text-sm md:text-lg text-gray-800" id="feat-2">Ergonomic, lightweight, and portable design.</span>
+                            <i class="fas fa-check-circle text-orange-500 mt-1 text-lg md:text-xl"></i>
+                            <span class="font-bold text-base md:text-xl text-gray-800" id="feat-2">Ergonomic, lightweight, and portable design.</span>
                         </div>
                         <div class="bullet-item">
-                            <i class="fas fa-check-circle text-orange-500 mt-1 text-lg"></i>
-                            <span class="font-bold text-sm md:text-lg text-gray-800" id="feat-3">Long-lasting rechargeable battery (USB-C).</span>
+                            <i class="fas fa-check-circle text-orange-500 mt-1 text-lg md:text-xl"></i>
+                            <span class="font-bold text-base md:text-xl text-gray-800" id="feat-3">Long-lasting rechargeable battery (USB-C).</span>
                         </div>
                     </div>
 
                     <!-- CTA & Scarcity -->
-                    <div class="flex flex-col items-center lg:items-start gap-8 animate-fade-up" style="animation-delay: 0.3s">
+                    <div class="flex flex-col items-center lg:items-start gap-10 animate-fade-up" style="animation-delay: 0.3s">
                         <button onclick="document.getElementById('country-selection').scrollIntoView({ behavior: 'smooth' })" 
-                                class="btn-check shadow-xl active:scale-95" id="cta-button">
+                                class="btn-check shadow-2xl active:scale-95 transition-all" id="cta-button">
                             CHECK AVAILABILITY
                         </button>
                         
@@ -218,11 +274,11 @@
                 </div>
 
                 <!-- CAROUSEL DESKTOP -->
-                <div class="lg:col-span-5 hidden lg:block">
+                <div class="lg:col-span-5 hidden lg:block sticky top-32">
                     <div class="carousel-wrapper shadow-2xl">
                         <div class="carousel-slide active carousel-slide-desktop"><img src="images/hilipert1.jpg" alt=""></div>
                         <div class="carousel-slide carousel-slide-desktop"><img src="images/hilipert2.jpg" alt=""></div>
-                        <div class="absolute bottom-4 left-0 w-full px-8 z-20">
+                        <div class="absolute bottom-6 left-0 w-full px-12 z-20">
                             <div class="h-1 bg-white/20 rounded-full overflow-hidden">
                                 <div class="h-full bg-orange-500 transition-all duration-[4000ms] progress-bar-desktop"></div>
                             </div>
@@ -233,13 +289,13 @@
         </div>
     </section>
 
-    <!-- COUNTRY SELECTION (Grid Desktop 2 Lines | 3 Columns) -->
-    <section id="country-selection" class="py-20 bg-gray-50 border-y border-gray-100">
+    <!-- COUNTRY SELECTION (Grid 2 Rows Desktop | Short Name First) -->
+    <section id="country-selection" class="py-24 bg-gray-50 border-y border-gray-100">
         <div class="container mx-auto px-6 max-w-6xl text-center">
-            <h2 class="text-2xl md:text-5xl font-black mb-4 tracking-tight" id="region-title">Select Your Destination</h2>
-            <p class="text-gray-400 mb-12 font-medium text-sm md:text-base" id="region-sub">Verify official availability and claim your 64% discount on the final batch.</p>
+            <h2 class="text-3xl md:text-5xl font-black mb-4 tracking-tight" id="region-title">Select Your Destination</h2>
+            <p class="text-gray-400 mb-14 font-medium text-base md:text-lg" id="region-sub">Verify official availability and claim your 64% discount on the final batch.</p>
             
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 justify-items-center">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 justify-items-center">
                 <!-- 1. Canada (6 letters) -->
                 <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country"><img src="https://flagcdn.com/w80/ca.png" alt=""><span id="country-1">Canada</span></a>
                 <!-- 2. Australia (9 letters) -->
@@ -256,8 +312,8 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-white pt-20 pb-10">
+    <!-- FOOTER (Ad Compliance 2026) -->
+    <footer class="bg-white pt-24 pb-12">
         <div class="container mx-auto px-6 max-w-7xl text-center">
             
             <div class="mb-10">
@@ -266,7 +322,7 @@
                 </p>
             </div>
 
-            <div class="flex flex-wrap justify-center gap-6 md:gap-12 mb-12 text-[9px] font-extrabold uppercase tracking-widest text-gray-400">
+            <div class="flex flex-wrap justify-center gap-8 md:gap-14 mb-16 text-[9px] font-extrabold uppercase tracking-widest text-gray-400">
                 <button onclick="openModal('privacy')" class="hover:text-black transition" id="link-privacy">Privacy Policy</button>
                 <button onclick="openModal('terms')" class="hover:text-black transition" id="link-terms">Terms & Conditions</button>
                 <button onclick="openModal('shipping')" class="hover:text-black transition" id="link-shipping">Shipping</button>
@@ -274,16 +330,16 @@
                 <button onclick="openModal('contact')" class="hover:text-black transition" id="link-contact">Contact Us</button>
             </div>
             
-            <img src="images/imgi_40_logo.png" alt="Footer Logo" class="h-8 mx-auto mb-8 opacity-20 grayscale">
-            <p class="text-[8px] text-gray-300 tracking-[0.4em] uppercase" id="copyright-text">© 2026 HILIPERT™ TECHNOLOGY PORTAL. ALL RIGHTS RESERVED.</p>
+            <img src="images/imgi_40_logo.png" alt="Footer Logo" class="h-8 mx-auto mb-10 opacity-20 grayscale">
+            <p class="text-[8px] text-gray-300 tracking-[0.5em] uppercase" id="copyright-text">© 2026 HILIPERT™ TECHNOLOGY PORTAL. ALL RIGHTS RESERVED.</p>
         </div>
     </footer>
 
     <!-- MODAL -->
     <div id="policyModal" class="modal" onclick="if(event.target == this) closeModal()">
         <div class="modal-content">
-            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-black text-2xl transition-colors font-bold">&times;</button>
-            <div id="modalBody" class="prose prose-sm prose-slate max-w-none pt-4 text-left text-slate-700"></div>
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-gray-400 hover:text-black text-2xl transition-colors font-bold">&times;</button>
+            <div id="modalBody" class="prose prose-sm lg:prose-base prose-slate max-w-none pt-4 text-left text-slate-700"></div>
         </div>
     </div>
 
@@ -331,18 +387,18 @@
 
         const legalContent = {
             en: {
-                privacy: `<h2>Privacy Policy</h2><p>Your data is processed according to international security standards.</p>`,
-                terms: `<h2>Terms of Service</h2><p>Authorized distribution portal for Hilipert™ products.</p>`,
-                shipping: `<h2>Shipping Policy</h2><p>3-40 business days delivery window.</p>`,
-                returns: `<h2>Returns</h2><p>30-day money-back guarantee for unused items.</p>`,
-                contact: `<h2>Contact Us</h2><p>Support: support@hilipert.com</p>`
+                privacy: `<h2>Privacy Policy</h2><p>Your data is processed according to international security standards. We collect only what's needed for your order.</p>`,
+                terms: `<h2>Terms of Service</h2><p>Official distribution portal. Offers are valid while stocks last.</p>`,
+                shipping: `<h2>Shipping Policy</h2><p>Standard delivery window is 3-40 business days. Tracking is provided.</p>`,
+                returns: `<h2>Returns</h2><p>30-day money-back guarantee for unused items in original packaging.</p>`,
+                contact: `<h2>Contact Us</h2><p>Official support: support@hilipert.com. We reply within 24 hours.</p>`
             },
             pt: {
-                privacy: `<h2>Política de Privacidade</h2><p>Os seus dados são tratados com segurança total conforme os padrões internacionais.</p>`,
-                terms: `<h2>Termos de Serviço</h2><p>Portal de distribuição autorizado para produtos Hilipert™.</p>`,
-                shipping: `<h2>Política de Envio</h2><p>Janela de entrega entre 3 a 40 dias úteis.</p>`,
-                returns: `<h2>Devoluções</h2><p>Garantia de 30 dias para itens não utilizados na embalagem original.</p>`,
-                contact: `<h2>Contactos</h2><p>Suporte: support@hilipert.com</p>`
+                privacy: `<h2>Política de Privacidade</h2><p>Os seus dados são tratados com total segurança e apenas para o processamento da sua encomenda.</p>`,
+                terms: `<h2>Termos de Serviço</h2><p>Portal oficial de distribuição. Ofertas válidas enquanto durar o stock.</p>`,
+                shipping: `<h2>Política de Envio</h2><p>Prazo médio de entrega de 3 a 40 dias úteis com rastreio completo.</p>`,
+                returns: `<h2>Devoluções</h2><p>Garantia de 30 dias para artigos não utilizados na embalagem original.</p>`,
+                contact: `<h2>Contactos</h2><p>Suporte oficial: support@hilipert.com. Respondemos em menos de 24 horas.</p>`
             }
         };
 
