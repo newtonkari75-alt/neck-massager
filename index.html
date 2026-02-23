@@ -1,9 +1,6 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
-    <!-- RAADS SCRIPT -->
-    <script src="https://api.raads.com.br/code/8300-762b9469-8365-424b-84e6-0d592370dec3"></script>
-
     <!-- PERFORMANCE & CORE VITALS -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
@@ -11,20 +8,14 @@
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="theme-color" content="#ffffff">
 
-    <!-- PRE-CONNECTIONS & PRELOADS -->
+    <!-- PRE-CONNECTIONS -->
     <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- MAIN SEO META TAGS -->
-    <title>Hilipert™ | Neck Massager 2.0 - Alívio Imediato</title>
-    <meta name="title" content="Neck Massager Hilipert 2.0">
-    <meta name="description" content="Portal oficial de informações e disponibilidade do Massageador de Pescoço Hilipert 2.0. Tecnologia TENS para alívio de dores e relaxamento profundo.">
+    <title>Hilipert™ | Neck Massager 2.0 - Deep Tension Relief</title>
     
-    <!-- INTERNATIONAL TARGETING -->
-    <meta http-equiv="content-language" content="en, pt">
-
-    <!-- LIBRARIES -->
+    <!-- UI LIBRARIES -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -37,25 +28,37 @@
             background-color: #ffffff;
             color: #111111;
         }
-        
-        .bg-primary { background-color: #000000; }
-        .text-primary { color: #000000; }
-        
-        .card-light {
-            background: #ffffff;
-            border: 1px solid #f3f4f6;
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+        /* "Fire" Text Effect for Headline */
+        .fire-gradient {
+            background: linear-gradient(to right, #f97316, #ef4444, #b91c1c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
-        .card-light:hover {
+        
+        .card-country {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 9999px; /* Pill format */
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 12px 24px;
+        }
+        .card-country:hover {
+            background: #000000;
+            color: #ffffff;
             border-color: #000000;
-            transform: translateY(-4px);
-            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.08);
+            transform: scale(1.05);
         }
 
         .carousel-wrapper {
             position: relative;
             width: 100%;
-            border-radius: 32px;
+            border-radius: 24px;
             overflow: hidden;
             background-color: #f9fafb;
             aspect-ratio: 1 / 1; 
@@ -68,7 +71,7 @@
             width: 100%;
             height: 100%;
             opacity: 0;
-            transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: opacity 0.8s ease-in-out;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -91,257 +94,182 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0,0.4);
-            backdrop-filter: blur(12px);
+            background-color: rgba(0,0,0,0.5);
+            backdrop-filter: blur(8px);
         }
         .modal-content {
             background-color: #fff;
-            margin: 5vh auto;
-            padding: 40px;
-            border-radius: 32px;
-            width: 92%;
-            max-width: 800px;
-            max-height: 85vh;
-            overflow-y: auto;
+            margin: 10vh auto;
+            padding: 32px;
+            border-radius: 24px;
+            width: 90%;
+            max-width: 600px;
             position: relative;
-            box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.2);
         }
 
         @keyframes fade-up {
-            from { opacity: 0; transform: translateY(30px); }
+            from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        .animate-fade-up { animation: fade-up 1s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-        
-        details summary::-webkit-details-marker { display: none; }
+        .animate-fade-up { animation: fade-up 0.8s ease-out forwards; }
     </style>
 </head>
-<body class="overflow-x-hidden selection:bg-black selection:text-white">
+<body class="overflow-x-hidden selection:bg-orange-500 selection:text-white">
 
-    <!-- BARRA DE ANÚNCIO -->
-    <div class="bg-primary text-white text-[10px] md:text-xs font-bold py-3 text-center uppercase tracking-[0.2em] px-5 sticky top-0 z-[60]" data-i18n="top_bar">
-        DEMANDA EXTREMA | VERIFIQUE O ESTOQUE POR REGIÃO
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="bg-black text-white text-[10px] md:text-xs font-bold py-3 text-center uppercase tracking-widest px-5 sticky top-0 z-[60]" data-i18n="top_bar">
+        EXTREME DEMAND | RELIEVE TENSION IN 15 MINUTES
     </div>
 
-    <!-- NAVEGAÇÃO -->
-    <nav class="bg-white/90 border-b border-gray-100 py-5 backdrop-blur-xl sticky top-[38px] z-50">
-        <div class="container mx-auto px-6 md:px-12 max-w-7xl flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <img src="images/imgi_40_logo.png" alt="Hilipert Logo" class="h-8 md:h-10 w-auto object-contain">
-                <span class="font-black text-xl tracking-tighter uppercase hidden sm:block">Hilipert™ 2.0</span>
+    <!-- NAVIGATION -->
+    <nav class="bg-white/90 border-b border-gray-100 py-4 backdrop-blur-md sticky top-[38px] z-50">
+        <div class="container mx-auto px-6 max-w-7xl flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="images/imgi_40_logo.png" alt="Logo" class="h-8 md:h-10">
             </div>
             <button onclick="document.getElementById('country-selection').scrollIntoView({ behavior: 'smooth' })" 
-                    class="text-[10px] font-bold uppercase tracking-widest bg-gray-50 px-5 py-2.5 rounded-full border border-gray-100 hover:bg-black hover:text-white transition-all"
+                    class="text-[10px] font-bold uppercase tracking-widest bg-black text-white px-6 py-2.5 rounded-full hover:bg-orange-600 transition-colors"
                     data-i18n="nav_check">
-                Check Status
+                Check Availability
             </button>
         </div>
     </nav>
 
-    <!-- SEÇÃO HERO -->
-    <section class="bg-white pt-12 pb-24 md:pt-20 md:pb-32 overflow-hidden">
-        <div class="container mx-auto px-6 md:px-12 max-w-7xl">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+    <!-- HERO SECTION -->
+    <section class="bg-white py-12 md:py-24">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
-                <!-- CARROSSEL -->
-                <div class="w-full order-1">
-                    <div class="carousel-wrapper shadow-2xl">
-                        <div class="carousel-slide active">
-                            <img src="images/hilipert1.jpg" alt="Neck Massager Hilipert 2.0 - Vista 1" onerror="this.src='https://via.placeholder.com/800?text=Hilipert+Image+1'">
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="images/hilipert2.jpg" alt="Neck Massager Hilipert 2.0 - Vista 2" onerror="this.src='https://via.placeholder.com/800?text=Hilipert+Image+2'">
-                        </div>
-                        
-                        <!-- Indicadores -->
-                        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
-                            <div class="w-12 h-1 bg-white/30 rounded-full overflow-hidden">
-                                <div class="h-full bg-white transition-all duration-[3000ms]" id="progress-bar"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CONTEÚDO HERO -->
-                <div class="w-full order-2">
-                    <div class="flex items-center gap-3 mb-8 animate-fade-up">
-                        <div class="flex text-black text-xs gap-0.5">
+                <!-- TEXT CONTENT (7 COLS) -->
+                <div class="lg:col-span-7 flex flex-col justify-center text-center lg:text-left order-2 lg:order-1">
+                    <div class="flex items-center justify-center lg:justify-start gap-2 mb-6 animate-fade-up">
+                        <div class="flex text-orange-500 text-xs">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
                         <span class="text-gray-400 font-bold text-[10px] uppercase tracking-widest border-l border-gray-200 pl-3" data-i18n="reviews">
-                            4.9 | 15,000+ Clientes Satisfeitos
+                            +15,000 Verified Users
                         </span>
                     </div>
                     
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-black mb-8 leading-[1.1] tracking-tight animate-fade-up" style="animation-delay: 0.1s" data-i18n="headline">
-                        Elimine as Dores no Pescoço em 15 Minutos.
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight tracking-tighter animate-fade-up">
+                        <span class="block" data-i18n="headline_1">Relieve Neck Tension</span>
+                        <span class="fire-gradient block" data-i18n="headline_2">in Just 15 Minutes.</span>
                     </h1>
                     
-                    <p class="text-gray-500 text-lg md:text-xl mb-10 leading-relaxed max-w-xl animate-fade-up" style="animation-delay: 0.2s" data-i18n="subheadline">
-                        O Hilipert 2.0 utiliza tecnologia TENS de pulso elétrico para penetrar profundamente nos músculos, aliviando o estresse e a tensão cervical instantaneamente.
+                    <p class="text-gray-500 text-lg md:text-xl mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed animate-fade-up" style="animation-delay: 0.1s" data-i18n="subheadline">
+                        The Hilipert 2.0 uses advanced TENS pulse technology to stimulate muscles and help ease everyday neck tension caused by work, screens, and stress.
                     </p>
 
-                    <div class="space-y-5 mb-12 animate-fade-up" style="animation-delay: 0.3s">
-                        <div class="flex items-center gap-4 group">
-                            <div class="bg-gray-50 group-hover:bg-black group-hover:text-white transition-colors w-10 h-10 rounded-2xl flex items-center justify-center shrink-0">
-                                <i class="fas fa-spa text-xs"></i>
-                            </div>
-                            <p class="text-sm md:text-base font-bold text-gray-800" data-i18n="feat1">Alívio profundo de tensões e nós.</p>
+                    <div class="flex flex-col gap-4 mb-12 animate-fade-up" style="animation-delay: 0.2s">
+                        <div class="flex items-center justify-center lg:justify-start gap-3">
+                            <i class="fas fa-check-circle text-orange-500"></i>
+                            <span class="font-bold text-base text-gray-800" data-i18n="feat1">Deep muscle relaxation support.</span>
                         </div>
-                        <div class="flex items-center gap-4 group">
-                            <div class="bg-gray-50 group-hover:bg-black group-hover:text-white transition-colors w-10 h-10 rounded-2xl flex items-center justify-center shrink-0">
-                                <i class="fas fa-mobile-alt text-xs"></i>
-                            </div>
-                            <p class="text-sm md:text-base font-bold text-gray-800" data-i18n="feat3">Design ergonômico, leve e portátil.</p>
+                        <div class="flex items-center justify-center lg:justify-start gap-3">
+                            <i class="fas fa-check-circle text-orange-500"></i>
+                            <span class="font-bold text-base text-gray-800" data-i18n="feat2">Ergonomic, lightweight, and portable design.</span>
                         </div>
-                        <div class="flex items-center gap-4 group">
-                            <div class="bg-gray-50 group-hover:bg-black group-hover:text-white transition-colors w-10 h-10 rounded-2xl flex items-center justify-center shrink-0">
-                                <i class="fas fa-battery-full text-xs"></i>
-                            </div>
-                            <p class="text-sm md:text-base font-bold text-gray-800" data-i18n="feat4">Bateria de longa duração via USB-C.</p>
+                        <div class="flex items-center justify-center lg:justify-start gap-3">
+                            <i class="fas fa-check-circle text-orange-500"></i>
+                            <span class="font-bold text-base text-gray-800" data-i18n="feat3">Long-lasting rechargeable battery (USB-C).</span>
                         </div>
                     </div>
 
-                    <div class="animate-fade-up" style="animation-delay: 0.4s">
-                        <div class="inline-flex items-center gap-2 mb-8 bg-red-50 text-red-700 px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest border border-red-100">
-                            <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
-                            <span data-i18n="stock">Estoque Limitado - Verifique agora</span>
-                        </div>
-                        
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 animate-fade-up" style="animation-delay: 0.3s">
                         <button onclick="document.getElementById('country-selection').scrollIntoView({ behavior: 'smooth' })" 
-                                class="w-full md:w-auto bg-black hover:bg-gray-800 text-white font-bold text-lg py-5 px-12 rounded-2xl shadow-2xl transition-all hover:-translate-y-1 active:scale-95 flex items-center justify-center gap-4 group">
-                            <span data-i18n="cta_check">Verificar Oferta Local</span>
-                            <i class="fas fa-arrow-right text-sm transition-transform group-hover:translate-x-1"></i>
+                                class="w-full sm:w-auto bg-black text-white font-black text-xl py-5 px-12 rounded-2xl shadow-xl hover:bg-orange-600 hover:-translate-y-1 transition-all active:scale-95">
+                            <span data-i18n="cta_check">SELECT YOUR COUNTRY</span>
                         </button>
+                        
+                        <div class="inline-flex items-center gap-2 bg-red-50 text-red-600 px-4 py-2 rounded-lg text-xs font-extrabold uppercase tracking-tight">
+                            <span class="w-2 h-2 rounded-full bg-red-600 animate-pulse"></span>
+                            <span data-i18n="stock">🔴 Limited Stock Available – Check Today’s Offer</span>
+                        </div>
                     </div>
                 </div>
+
+                <!-- CAROUSEL (5 COLS) -->
+                <div class="lg:col-span-5 order-1 lg:order-2">
+                    <div class="carousel-wrapper shadow-2xl border-4 border-white">
+                        <div class="carousel-slide active">
+                            <img src="images/hilipert1.jpg" alt="Massager View 1" onerror="this.src='https://via.placeholder.com/600x600?text=Hilipert+1'">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/hilipert2.jpg" alt="Massager View 2" onerror="this.src='https://via.placeholder.com/600x600?text=Hilipert+2'">
+                        </div>
+                        
+                        <!-- Mini Progress Bar -->
+                        <div class="absolute bottom-4 left-0 w-full px-8 z-20">
+                            <div class="h-1 bg-white/20 rounded-full overflow-hidden">
+                                <div class="h-full bg-orange-500 transition-all duration-[4000ms]" id="progress-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- SELEÇÃO DE PAÍSES (RESTRITO E SIMPLIFICADO) -->
-    <section id="country-selection" class="py-32 bg-gray-50">
-        <div class="container mx-auto px-6 md:px-12 max-w-5xl text-center">
-            <h2 class="text-3xl md:text-5xl font-black mb-6 tracking-tight text-black" data-i18n="region_title">Selecione sua Localização</h2>
-            <p class="text-gray-400 mb-16 max-w-2xl mx-auto font-medium" data-i18n="region_sub">Selecione seu país para acessar o estoque oficial e os descontos aplicáveis.</p>
+    <!-- COUNTRY SELECTION -->
+    <section id="country-selection" class="py-24 bg-gray-50 border-y border-gray-100">
+        <div class="container mx-auto px-6 max-w-5xl text-center">
+            <h2 class="text-3xl md:text-5xl font-black mb-4 tracking-tight" data-i18n="region_title">Select Your Destination</h2>
+            <p class="text-gray-400 mb-16 font-medium" data-i18n="region_sub">Verify official availability and claim the current batch discount.</p>
             
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
-                <!-- Estados Unidos -->
-                <a href="#" class="card-light p-8 rounded-3xl flex flex-col items-center gap-6 group">
-                    <img src="https://flagcdn.com/w160/us.png" class="w-16 h-auto rounded shadow-sm group-hover:scale-105 transition-transform" alt="USA">
-                    <span class="font-bold text-lg text-black">Estados Unidos</span>
-                    <div class="text-[10px] bg-black text-white px-4 py-1.5 rounded-full font-bold uppercase opacity-0 group-hover:opacity-100 transition-opacity">Verificar</div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center">
+                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country w-full max-w-[280px]">
+                    <img src="https://flagcdn.com/w40/us.png" class="w-6 h-auto" alt="USA">
+                    <span class="font-bold">United States</span>
                 </a>
-                <!-- Reino Unido -->
-                <a href="#" class="card-light p-8 rounded-3xl flex flex-col items-center gap-6 group">
-                    <img src="https://flagcdn.com/w160/gb.png" class="w-16 h-auto rounded shadow-sm group-hover:scale-105 transition-transform" alt="UK">
-                    <span class="font-bold text-lg text-black">Reino Unido</span>
-                    <div class="text-[10px] bg-black text-white px-4 py-1.5 rounded-full font-bold uppercase opacity-0 group-hover:opacity-100 transition-opacity">Verificar</div>
+                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country w-full max-w-[280px]">
+                    <img src="https://flagcdn.com/w40/gb.png" class="w-6 h-auto" alt="UK">
+                    <span class="font-bold">United Kingdom</span>
                 </a>
-                <!-- Canadá -->
-                <a href="#" class="card-light p-8 rounded-3xl flex flex-col items-center gap-6 group">
-                    <img src="https://flagcdn.com/w160/ca.png" class="w-16 h-auto rounded shadow-sm group-hover:scale-105 transition-transform" alt="Canada">
-                    <span class="font-bold text-lg text-black">Canadá</span>
-                    <div class="text-[10px] bg-black text-white px-4 py-1.5 rounded-full font-bold uppercase opacity-0 group-hover:opacity-100 transition-opacity">Verificar</div>
+                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country w-full max-w-[280px]">
+                    <img src="https://flagcdn.com/w40/ca.png" class="w-6 h-auto" alt="Canada">
+                    <span class="font-bold">Canada</span>
                 </a>
-                <!-- Austrália -->
-                <a href="#" class="card-light p-8 rounded-3xl flex flex-col items-center gap-6 group">
-                    <img src="https://flagcdn.com/w160/au.png" class="w-16 h-auto rounded shadow-sm group-hover:scale-105 transition-transform" alt="Australia">
-                    <span class="font-bold text-lg text-black">Austrália</span>
-                    <div class="text-[10px] bg-black text-white px-4 py-1.5 rounded-full font-bold uppercase opacity-0 group-hover:opacity-100 transition-opacity">Verificar</div>
+                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country w-full max-w-[280px]">
+                    <img src="https://flagcdn.com/w40/au.png" class="w-6 h-auto" alt="Australia">
+                    <span class="font-bold">Australia</span>
                 </a>
-                <!-- Nova Zelândia -->
-                <a href="#" class="card-light p-8 rounded-3xl flex flex-col items-center gap-6 group">
-                    <img src="https://flagcdn.com/w160/nz.png" class="w-16 h-auto rounded shadow-sm group-hover:scale-105 transition-transform" alt="New Zealand">
-                    <span class="font-bold text-lg text-black">Nova Zelândia</span>
-                    <div class="text-[10px] bg-black text-white px-4 py-1.5 rounded-full font-bold uppercase opacity-0 group-hover:opacity-100 transition-opacity">Verificar</div>
+                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country w-full max-w-[280px]">
+                    <img src="https://flagcdn.com/w40/nz.png" class="w-6 h-auto" alt="NZ">
+                    <span class="font-bold">New Zealand</span>
                 </a>
-                <!-- Global -->
-                <a href="#" class="card-light p-8 rounded-3xl flex flex-col items-center gap-6 group bg-black">
-                    <div class="w-16 h-12 flex items-center justify-center bg-white/10 rounded-lg group-hover:scale-105 transition-transform">
-                        <i class="fas fa-globe text-white text-3xl"></i>
-                    </div>
-                    <span class="font-bold text-lg text-white">Global</span>
-                    <div class="text-[10px] bg-white text-black px-4 py-1.5 rounded-full font-bold uppercase opacity-100 transition-opacity">Ver Oferta</div>
+                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country w-full max-w-[280px] bg-orange-600 text-white border-orange-600">
+                    <i class="fas fa-globe"></i>
+                    <span class="font-bold">Global / Others</span>
                 </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ SECTION -->
-    <section class="bg-white py-32">
-        <div class="container mx-auto px-6 md:px-12 max-w-3xl">
-            <h2 class="text-4xl font-black text-center mb-16 tracking-tight" data-i18n="faq_title">Perguntas Frequentes</h2>
-            <div class="space-y-6">
-                <details class="group bg-gray-50 p-6 rounded-3xl cursor-pointer">
-                    <summary class="flex justify-between items-center font-bold text-xl list-none">
-                        <span data-i18n="faq_1_q">É seguro usar?</span>
-                        <div class="w-10 h-10 bg-white rounded-2xl flex items-center justify-center shadow-sm group-open:rotate-45 transition-transform">
-                            <i class="fas fa-plus text-xs"></i>
-                        </div>
-                    </summary>
-                    <div class="mt-4 text-gray-500 leading-relaxed font-medium" data-i18n="faq_1_a">
-                        Sim, o Hilipert 2.0 utiliza tecnologia TENS segura e possui timer automático de 15 minutos.
-                    </div>
-                </details>
-                <details class="group bg-gray-50 p-6 rounded-3xl cursor-pointer">
-                    <summary class="flex justify-between items-center font-bold text-xl list-none">
-                        <span data-i18n="faq_2_q">Precisa de gel?</span>
-                        <div class="w-10 h-10 bg-white rounded-2xl flex items-center justify-center shadow-sm group-open:rotate-45 transition-transform">
-                            <i class="fas fa-plus text-xs"></i>
-                        </div>
-                    </summary>
-                    <div class="mt-4 text-gray-500 leading-relaxed font-medium" data-i18n="faq_2_a">
-                        Não. As placas de aço inoxidável 304 são projetadas para conduzir os pulsos sem a necessidade de géis pegajosos.
-                    </div>
-                </details>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-gray-50 pt-32 pb-16 border-t border-gray-100">
-        <div class="container mx-auto px-6 md:px-12 text-center max-w-7xl">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-left mb-24">
-                <div class="space-y-6">
-                    <h4 class="font-black text-xs uppercase tracking-widest text-gray-400" data-i18n="corp_info">Informações</h4>
-                    <p class="text-sm font-bold">Hilipert Global Distribution</p>
-                    <div class="flex flex-col gap-2">
-                        <a href="mailto:support@hilipert-neck.com" class="text-sm font-bold hover:underline">support@hilipert-neck.com</a>
-                    </div>
-                </div>
-                <div class="md:col-span-2 space-y-6">
-                    <h4 class="font-black text-xs uppercase tracking-widest text-gray-400">Links Legais</h4>
-                    <div class="flex flex-wrap gap-x-8 gap-y-4 font-bold text-[10px] uppercase tracking-widest">
-                        <button onclick="openModal('privacy')" class="hover:text-black transition">Privacidade</button>
-                        <button onclick="openModal('terms')" class="hover:text-black transition">Termos</button>
-                        <button onclick="openModal('shipping')" class="hover:text-black transition">Envio</button>
-                        <button onclick="openModal('returns')" class="hover:text-black transition">Reembolso</button>
-                        <button onclick="openModal('contact')" class="hover:text-black transition">Contato</button>
-                    </div>
-                </div>
+    <footer class="bg-white pt-24 pb-12">
+        <div class="container mx-auto px-6 max-w-7xl text-center">
+            <div class="flex flex-wrap justify-center gap-8 mb-16 text-[10px] font-bold uppercase tracking-widest text-gray-400">
+                <button onclick="openModal('privacy')" class="hover:text-black">Privacy Policy</button>
+                <button onclick="openModal('terms')" class="hover:text-black">Terms & Conditions</button>
+                <button onclick="openModal('contact')" class="hover:text-black">Contact Us</button>
             </div>
-
-            <div class="text-[10px] text-gray-400 max-w-4xl mx-auto leading-relaxed italic border-t border-gray-200 pt-16" data-i18n="footer_disclaimer">
-                <strong>Aviso:</strong> Este é um portal informativo autorizado. Os resultados podem variar conforme o uso individual.
-            </div>
-
-            <div class="mt-16 flex flex-col items-center gap-6">
-                <img src="images/imgi_40_logo.png" alt="Logo Footer" class="h-6 opacity-30 grayscale">
-                <p class="text-[9px] text-gray-400 tracking-[0.3em] uppercase">© 2026 HILIPERT™ NECK MASSAGER 2.0 PORTAL</p>
-            </div>
+            
+            <img src="images/imgi_40_logo.png" alt="Footer Logo" class="h-6 mx-auto mb-8 opacity-20 grayscale">
+            <p class="text-[9px] text-gray-300 tracking-[0.4em] uppercase">© 2026 HILIPERT™ TECHNOLOGY PORTAL</p>
         </div>
     </footer>
 
     <!-- MODAL -->
     <div id="policyModal" class="modal" onclick="if(event.target == this) closeModal()">
-        <div class="modal-content text-left">
-            <button onclick="closeModal()" class="sticky top-0 float-right text-gray-400 hover:text-black transition-colors w-10 h-10 flex items-center justify-center bg-gray-50 rounded-full z-10">&times;</button>
-            <div id="modalBody" class="pt-8 prose prose-sm max-w-none"></div>
+        <div class="modal-content">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-black text-2xl">&times;</button>
+            <div id="modalBody" class="prose prose-sm pt-4"></div>
         </div>
     </div>
 
     <script>
+        // Carousel Logic
         const slides = document.querySelectorAll('.carousel-slide');
         const progressBar = document.getElementById('progress-bar');
         let currentSlide = 0;
@@ -354,75 +282,48 @@
             progressBar.style.transition = 'none';
             progressBar.style.width = '0%';
             setTimeout(() => {
-                progressBar.style.transition = 'width 3000ms linear';
+                progressBar.style.transition = 'width 4000ms linear';
                 progressBar.style.width = '100%';
             }, 50);
         }
         
-        setInterval(rotateCarousel, 3000);
+        setInterval(rotateCarousel, 4000);
         rotateCarousel();
 
+        // Language Logic
         const resources = {
             en: {
-                top_bar: "EXTREME DEMAND | CHECK REGIONAL STOCK",
-                nav_check: "Check Status",
-                reviews: "4.9 | 15,000+ Satisfied Customers",
-                headline: "End Neck Pain in 15 Minutes.",
-                subheadline: "Hilipert 2.0 uses TENS technology to penetrate deep into the muscles, relieving cervical stress instantly.",
-                feat1: "Deep relief for tension & knots.",
-                feat3: "Lightweight, ergonomic & portable.",
-                feat4: "Long-lasting battery via USB-C.",
-                stock: "Limited Stock Available",
-                cta_check: "Check Local Offer",
-                region_title: "Select Your Location",
-                region_sub: "Choose your country to get the official store link and regional discounts.",
-                faq_title: "Common Questions",
-                faq_1_q: "Is it safe to use?",
-                faq_1_a: "Yes, Hilipert 2.0 is home-safe and features an auto-off timer after 15 minutes.",
-                faq_2_q: "Need gel?",
-                faq_2_a: "No. The 304 stainless steel plates are designed to conduct pulses without sticky gels.",
-                modal_privacy: "<h2>Privacy Policy</h2><p>Your data is encrypted and secure.</p>",
-                modal_terms: "<h2>Terms</h2><p>Official authorized distribution rules apply.</p>"
-            },
-            pt: {
-                top_bar: "DEMANDA EXTREMA | VERIFIQUE O ESTOQUE POR REGIÃO",
-                nav_check: "Verificar Status",
-                reviews: "4.9 | Mais de 15.000 Clientes Satisfeitos",
-                headline: "Elimine as Dores no Pescoço em 15 Minutos.",
-                subheadline: "O Hilipert 2.0 utiliza tecnologia TENS de pulso elétrico para penetrar nos músculos, aliviando o estresse cervical.",
-                feat1: "Alívio profundo de tensões.",
-                feat3: "Design ergonômico e portátil.",
-                feat4: "Bateria de longa duração USB-C.",
-                stock: "Estoque Limitado - Verifique agora",
-                cta_check: "Verificar Oferta Local",
-                region_title: "Selecione sua Localização",
-                region_sub: "Selecione seu país para acessar o estoque oficial e os descontos aplicáveis.",
-                faq_title: "Perguntas Frequentes",
-                faq_1_q: "É seguro usar?",
-                faq_1_a: "Sim, o Hilipert 2.0 utiliza tecnologia TENS segura e possui timer automático de 15 minutos.",
-                faq_2_q: "Precisa de gel?",
-                faq_2_a: "Não. As placas de aço inoxidável 304 são projetadas para conduzir os pulsos sem a necessidade de géis.",
-                modal_privacy: "<h2>Privacidade</h2><p>Seus dados estão protegidos.</p>",
-                modal_terms: "<h2>Termos</h2><p>Regras oficiais de distribuição autorizada.</p>"
+                top_bar: "EXTREME DEMAND | RELIEVE TENSION IN 15 MINUTES",
+                nav_check: "Check Availability",
+                reviews: "+15,000 Verified Users",
+                headline_1: "Relieve Neck Tension",
+                headline_2: "in Just 15 Minutes.",
+                subheadline: "The Hilipert 2.0 uses advanced TENS pulse technology to stimulate muscles and help ease everyday neck tension caused by work, screens, and stress.",
+                feat1: "Deep muscle relaxation support.", 
+                feat2: "Ergonomic, lightweight, and portable design.", 
+                feat3: "Long-lasting rechargeable battery (USB-C).",
+                stock: "🔴 Limited Stock Available – Check Today’s Offer",
+                cta_check: "SELECT YOUR COUNTRY",
+                region_title: "Select Your Destination",
+                region_sub: "Verify official availability and claim the current batch discount.",
+                modal_privacy: "<h2>Privacy</h2><p>Your data is secure and encrypted according to global standards.</p>",
+                modal_terms: "<h2>Terms</h2><p>Offers are valid while regional stocks last.</p>",
+                modal_contact: "<h2>Contact</h2><p>Official support: support@hilipert-neck.com</p>"
             }
         };
 
-        let currentLang = 'pt'; // Default to PT based on query
-
-        function setLanguage(lang) {
-            currentLang = resources[lang] ? lang : 'pt';
-            const texts = resources[currentLang];
+        function setLanguage() {
+            const texts = resources['en'];
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (texts[key]) el.innerText = texts[key];
             });
-            document.documentElement.lang = currentLang;
+            document.documentElement.lang = 'en';
         }
 
         function openModal(type) {
             const body = document.getElementById('modalBody');
-            const langData = resources[currentLang];
-            body.innerHTML = langData[`modal_${type}`] || '<h2>Conteúdo em carregamento...</h2>';
+            body.innerHTML = resources['en'][`modal_${type}`] || 'Loading...';
             document.getElementById('policyModal').style.display = "block";
             document.body.style.overflow = "hidden";
         }
@@ -432,9 +333,7 @@
             document.body.style.overflow = "auto";
         }
 
-        document.addEventListener('DOMContentLoaded', () => {
-            setLanguage('pt');
-        });
+        document.addEventListener('DOMContentLoaded', setLanguage);
     </script>
 </body>
 </html>
