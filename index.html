@@ -54,7 +54,6 @@
             font-size: 11px;
             text-transform: uppercase;
             letter-spacing: 0.02em;
-            max-width: 100%;
         }
         .red-dot {
             width: 10px;
@@ -86,60 +85,45 @@
             transform: scale(1.02);
         }
         
-        /* Botões de Países Estilo image_b9117c.png */
-        .country-pill {
+        /* Botões de Países Estilo image_b9117c.png com Grelha Desktop */
+        .card-country {
             background: #ffffff;
-            border: 1px solid #e5e7eb;
+            border: 2px solid #f0f0f0;
             border-radius: 9999px;
-            transition: all 0.2s ease;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 14px;
+            gap: 12px;
             padding: 16px 24px;
             width: 100%;
-            max-width: 400px;
             color: #111111;
-            font-weight: 700;
-            font-size: 16px;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
         }
-        .country-pill img {
-            width: 30px;
-            height: auto;
-            border-radius: 2px;
+        
+        @media (min-width: 768px) {
+            .card-country {
+                padding: 22px 40px;
+                font-size: 1.125rem;
+            }
         }
-        .country-pill:hover {
+
+        .card-country:hover {
             border-color: #000000;
-            background-color: #fafafa;
+            transform: scale(1.03);
+            box-shadow: 0 10px 20px -10px rgba(0,0,0,0.1);
         }
-        .country-pill-global {
-            background: #ea580c;
-            border-color: #ea580c;
+
+        .card-global {
+            background: #f97316;
+            border-color: #f97316;
             color: #ffffff;
         }
-        .country-pill-global:hover {
-            background: #d44d0b;
+        .card-global:hover {
+            background: #ea580c;
+            border-color: #ea580c;
         }
 
-        /* Alinhamento de Bullet Points conforme image_b90da0.png */
-        .bullet-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 16px;
-            text-align: left;
-            font-weight: 700;
-            color: #1f2937;
-            font-size: 17px;
-        }
-        .bullet-icon {
-            color: #f97316;
-            font-size: 20px;
-            margin-top: 2px;
-        }
-
-        /* Estrutura de Carrossel (Sem bordas nas fotos) */
+        /* Estrutura do Carrossel */
         .carousel-wrapper {
             position: relative;
             width: 100%;
@@ -148,6 +132,7 @@
             background-color: #f9fafb;
             aspect-ratio: 1 / 1; 
         }
+
         .carousel-slide {
             position: absolute;
             top: 0; left: 0;
@@ -188,6 +173,14 @@
             to { opacity: 1; transform: translateY(0); }
         }
         .animate-fade-up { animation: fade-up 0.8s ease-out forwards; }
+
+        /* Bullet Points conforme image_b90da0.png */
+        .bullet-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            text-align: left;
+        }
     </style>
 </head>
 <body class="overflow-x-hidden selection:bg-orange-500 selection:text-white">
@@ -197,18 +190,13 @@
         EXCLUSIVE OFFER | 64% DISCOUNT TODAY ONLY
     </div>
 
-    <!-- HEADER (Logo | Divider | Text - Estilo image_b920de.png) -->
+    <!-- HEADER (Logo | Divider | Text) -->
     <nav class="bg-white/90 border-b border-gray-100 py-4 md:py-6 backdrop-blur-md sticky top-[38px] z-50">
         <div class="container mx-auto px-6 max-w-7xl flex justify-center lg:justify-start items-center gap-4 md:gap-6">
-            <!-- Logo Section -->
             <div class="flex items-center">
                 <img src="images/imgi_40_logo.png" alt="Hilipert Logo" class="h-10 md:h-16 w-auto object-contain">
             </div>
-            
-            <!-- Vertical Divider -->
             <div class="h-8 md:h-12 w-px bg-gray-200"></div>
-            
-            <!-- Header Text -->
             <div class="text-xs md:text-lg font-medium text-gray-800 tracking-tight leading-tight">
                 Enjoy Massage Therapy at Home
             </div>
@@ -220,11 +208,11 @@
         <div class="container mx-auto px-6 max-w-7xl">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                 
-                <!-- CONTENT -->
+                <!-- TEXT CONTENT -->
                 <div class="lg:col-span-7 flex flex-col justify-center text-center lg:text-left">
                     
                     <!-- Prova Social -->
-                    <div class="flex items-center justify-center lg:justify-start gap-2 mb-6 animate-fade-up">
+                    <div class="flex items-center justify-center lg:justify-start gap-2 mb-4 animate-fade-up">
                         <div class="flex text-orange-500 text-xs">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
@@ -239,8 +227,8 @@
                         <span class="fire-gradient block">in Just 15 Minutes.</span>
                     </h1>
 
-                    <!-- CAROUSEL MOBILE (Entre Titulo e Texto) -->
-                    <div class="lg:hidden mb-12 animate-fade-up" style="animation-delay: 0.05s">
+                    <!-- CAROUSEL MOBILE -->
+                    <div class="lg:hidden mb-10 animate-fade-up" style="animation-delay: 0.05s">
                         <div class="carousel-wrapper shadow-xl">
                             <div class="carousel-slide active carousel-slide-mobile">
                                 <img src="images/hilipert1.jpg" alt="Neck Massager 1">
@@ -263,23 +251,23 @@
                         </p>
                     </div>
 
-                    <!-- Bullet Points (Estilo image_b90da0.png) -->
+                    <!-- Bullet Points -->
                     <div class="max-w-max mx-auto lg:mx-0 flex flex-col gap-6 mb-12 animate-fade-up" style="animation-delay: 0.2s">
                         <div class="bullet-item">
-                            <i class="fas fa-check-circle bullet-icon"></i>
-                            <span>Deep muscle relaxation support.</span>
+                            <i class="fas fa-check-circle text-orange-500 mt-1 text-lg"></i>
+                            <span class="font-bold text-base md:text-lg text-gray-800">Deep muscle relaxation support.</span>
                         </div>
                         <div class="bullet-item">
-                            <i class="fas fa-check-circle bullet-icon"></i>
-                            <span>Ergonomic, lightweight, and portable design.</span>
+                            <i class="fas fa-check-circle text-orange-500 mt-1 text-lg"></i>
+                            <span class="font-bold text-base md:text-lg text-gray-800">Ergonomic, lightweight, and portable design.</span>
                         </div>
                         <div class="bullet-item">
-                            <i class="fas fa-check-circle bullet-icon"></i>
-                            <span>Long-lasting rechargeable battery (USB-C).</span>
+                            <i class="fas fa-check-circle text-orange-500 mt-1 text-lg"></i>
+                            <span class="font-bold text-base md:text-lg text-gray-800">Long-lasting rechargeable battery (USB-C).</span>
                         </div>
                     </div>
 
-                    <!-- CTA & Scarcity Banner (image_b91d39.png) -->
+                    <!-- CTA & Scarcity -->
                     <div class="flex flex-col items-center lg:items-start gap-8 animate-fade-up" style="animation-delay: 0.3s">
                         <button onclick="document.getElementById('country-selection').scrollIntoView({ behavior: 'smooth' })" 
                                 class="btn-check shadow-2xl active:scale-95">
@@ -313,42 +301,42 @@
         </div>
     </section>
 
-    <!-- SELECÇÃO DE PAÍSES (Reordenado por mercado e Global em Laranja) -->
+    <!-- COUNTRY SELECTION (Grid Desktop Melhorada | Mobile por Caracteres) -->
     <section id="country-selection" class="py-24 bg-gray-50 border-y border-gray-100">
-        <div class="container mx-auto px-6 max-w-xl text-center">
+        <div class="container mx-auto px-6 max-w-6xl text-center">
             <h2 class="text-3xl md:text-5xl font-black mb-4 tracking-tight">Select Your Destination</h2>
             <p class="text-gray-400 mb-12 font-medium">Verify official availability and claim your 64% discount on the final batch.</p>
             
-            <div class="flex flex-col items-center gap-4">
-                <!-- United States -->
-                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="country-pill">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 justify-items-center">
+                <!-- 1. USA (3 chars) -->
+                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country max-w-[400px]">
                     <img src="https://flagcdn.com/w80/us.png" alt="USA">
-                    <span>United States</span>
+                    <span class="font-extrabold uppercase">USA</span>
                 </a>
-                <!-- United Kingdom -->
-                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="country-pill">
-                    <img src="https://flagcdn.com/w80/gb.png" alt="UK">
-                    <span>United Kingdom</span>
-                </a>
-                <!-- Canada -->
-                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="country-pill">
+                <!-- 2. Canada (6 chars) -->
+                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country max-w-[400px]">
                     <img src="https://flagcdn.com/w80/ca.png" alt="Canada">
-                    <span>Canada</span>
+                    <span class="font-extrabold uppercase">Canada</span>
                 </a>
-                <!-- Australia -->
-                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="country-pill">
+                <!-- 3. Australia (9 chars) -->
+                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country max-w-[400px]">
                     <img src="https://flagcdn.com/w80/au.png" alt="Australia">
-                    <span>Australia</span>
+                    <span class="font-extrabold uppercase">Australia</span>
                 </a>
-                <!-- New Zealand -->
-                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="country-pill">
+                <!-- 4. New Zealand (11 chars) -->
+                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country max-w-[400px]">
                     <img src="https://flagcdn.com/w80/nz.png" alt="NZ">
-                    <span>New Zealand</span>
+                    <span class="font-extrabold uppercase">New Zealand</span>
                 </a>
-                <!-- Global (Destaque Laranja) -->
-                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="country-pill country-pill-global">
+                <!-- 5. United Kingdom (14 chars) -->
+                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country max-w-[400px]">
+                    <img src="https://flagcdn.com/w80/gb.png" alt="UK">
+                    <span class="font-extrabold uppercase">United Kingdom</span>
+                </a>
+                <!-- 6. Global / Others -->
+                <a href="https://www.clickrtrckr.com/2LXFFTP/3GHXJS7/" class="card-country card-global max-w-[400px]">
                     <i class="fas fa-globe text-xl"></i>
-                    <span>Global / Others</span>
+                    <span class="font-extrabold uppercase">Global / Others</span>
                 </a>
             </div>
         </div>
@@ -379,7 +367,6 @@
     </div>
 
     <script>
-        // Lógica de Carrossel Unificada
         function initCarousel(slideClass, progressClass) {
             const slides = document.querySelectorAll(slideClass);
             const progressBar = document.querySelector(progressClass);
@@ -405,11 +392,11 @@
         }
 
         const legalContent = {
-            privacy: `<h2 class="text-2xl font-black mb-6">PRIVACY POLICY</h2><p>Your data is processed according to GDPR regulations and industry best practices. We prioritize your privacy and data security above all.</p>`,
-            terms: `<h2 class="text-2xl font-black mb-6">TERMS OF SERVICE</h2><p>By using this portal, you agree to our terms and conditions for authorized product distribution. All offers are subject to local availability.</p>`,
-            shipping: `<h2 class="text-2xl font-black mb-6">SHIPPING POLICY</h2><p>Delivery times typically vary between 3 to 40 business days depending on location. Tracking information is provided for all orders.</p>`,
-            returns: `<h2 class="text-2xl font-black mb-6">RETURNS & REFUNDS</h2><p>We offer a 30-day money-back guarantee for unused and original-packaged items. Contact support for instructions.</p>`,
-            contact: `<h2 class="text-2xl font-black mb-6">CONTACT US</h2><p><strong>Support Email:</strong> support@hilipert.com</p><p><strong>Response Time:</strong> We aim to reply within 24 hours.</p>`
+            privacy: `<h2 class="text-2xl font-black mb-6">PRIVACY POLICY</h2><p>Your data is processed according to GDPR regulations and industry best practices...</p>`,
+            terms: `<h2 class="text-2xl font-black mb-6">TERMS OF SERVICE</h2><p>By using this portal, you agree to our terms and conditions for authorized product distribution...</p>`,
+            shipping: `<h2 class="text-2xl font-black mb-6">SHIPPING POLICY</h2><p>Delivery times typically vary between 3 to 40 business days depending on location...</p>`,
+            returns: `<h2 class="text-2xl font-black mb-6">RETURNS & REFUNDS</h2><p>We offer a 30-day money-back guarantee for unused and original-packaged items...</p>`,
+            contact: `<h2 class="text-2xl font-black mb-6">CONTACT US</h2><p><strong>Support Email:</strong> support@hilipert.com</p>`
         };
 
         function openModal(type) {
